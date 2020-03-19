@@ -1,0 +1,7 @@
+﻿  Source.cpp
+D:\Repositories\2020-spring\apk\lab1-ComparingAsmWithC\lab1-ComparingAsmWithC\Source.cpp(79,14): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 10 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  lab1-ComparingAsmWithC.vcxproj -> D:\Repositories\2020-spring\apk\lab1-ComparingAsmWithC\Release\lab1-ComparingAsmWithC.exe
