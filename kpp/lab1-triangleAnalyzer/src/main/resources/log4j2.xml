@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %-5level - %msg%n"/>
+
+        </Console>
+        <RollingFile name="RollingFile" append="true"
+                     fileName="./logs/current-log.log"
+                     filePattern="./logs/$${date:yyyy-MM}/old-log-%d{dd-MMMM}-%i.log">
+            <PatternLayout>
+                <pattern>%d [%p] %C [%t]%n%m%n%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <!-- rollover on startup, daily and when the file reaches
+                    10 MegaBytes -->
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy
+                        size="10 MB" />
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController" level="trace" additivity="false">
+            <AppenderRef ref="RollingFile"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

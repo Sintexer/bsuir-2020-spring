@@ -1,0 +1,9 @@
+2020-03-20 22:38:43,681 [ERROR] com.ilyabuglakov.triangleanalyzer.application.IllegalArgumentExceptionHandler [http-nio-8080-exec-1]
+Such triangle can't exist: side1=0, side2=3, side3=5
+
+2020-03-20 22:38:48,755 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=3, side2=3, side3=5
+
+2020-03-20 22:38:51,454 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-5]
+Normal work. Provided sides: side1=4, side2=3, side3=5
+
