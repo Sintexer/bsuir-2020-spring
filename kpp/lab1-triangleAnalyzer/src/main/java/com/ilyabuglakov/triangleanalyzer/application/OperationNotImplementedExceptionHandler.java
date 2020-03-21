@@ -12,12 +12,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class OperationNotImplementedExceptionHandler implements ExceptionMapper<OperationNotImplementedException> {
 
-    private String description;
-
     @Override
     @ExceptionHandler(OperationNotImplementedException.class)
     public ResponseEntity<?> handle(OperationNotImplementedException e) {
-        description = e.getMessage()!=null? e.getMessage(): e.toString();
+        String description = e.getMessage()!=null? e.getMessage(): "Operation is not implemented";
         TriangleAnalyzerController.logger.error(description);
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)

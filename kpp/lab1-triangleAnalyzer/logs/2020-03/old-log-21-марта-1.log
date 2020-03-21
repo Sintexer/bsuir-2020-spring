@@ -1,0 +1,12 @@
+2020-03-21 09:01:27,941 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-1]
+Normal work. Provided sides: side1=42, side2=32, side3=52
+
+2020-03-21 09:01:36,840 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=4, side2=3, side3=5
+
+2020-03-21 09:01:44,184 [ERROR] com.ilyabuglakov.triangleanalyzer.application.InternalServerErrorExceptionHandler [http-nio-8080-exec-4]
+Server can't perform operation while side2=4
+
+2020-03-21 09:01:54,956 [ERROR] com.ilyabuglakov.triangleanalyzer.application.OperationNotImplementedExceptionHandler [http-nio-8080-exec-5]
+PUT request is in development
+

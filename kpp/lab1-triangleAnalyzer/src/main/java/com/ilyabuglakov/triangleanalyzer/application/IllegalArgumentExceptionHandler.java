@@ -10,14 +10,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestControllerAdvice
 public class IllegalArgumentExceptionHandler implements ExceptionMapper<IllegalArgumentException> {
-
-    private String description;
-
     @Override
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<?> handle(IllegalArgumentException e) {
-        description = e.getMessage()!=null? e.getMessage(): e.toString();
-        TriangleAnalyzerController.logger.error(description);
+        String description = "Provided sides can't form triangle";
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .contentType(MediaType.APPLICATION_JSON)

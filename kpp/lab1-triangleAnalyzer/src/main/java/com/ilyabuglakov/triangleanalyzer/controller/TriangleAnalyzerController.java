@@ -26,22 +26,28 @@ public class TriangleAnalyzerController {
         TriangleAnalyzerService service = new TriangleAnalyzerService();
 
         //Triangle validation
-        if (!service.isValid(sd1, sd2, sd3)) {
-            throw new IllegalArgumentException("Such triangle can't exist: side1="+side1+", side2="+side2+", side3="+side3);
+        if (!service.validate(sd1, sd2, sd3)) {
+            logger.error("Such triangle can't exist: side1={}, side2=, side3=", side1, side2, side3);
+            throw new IllegalArgumentException();
         }
 
-        //Test for InternalServerErrorExceptionHandler
-        if(sd2==4)
-            throw new InternalServerErrorException("Server can't perform operation while side2=4");
+        //Check of InternalServerErrorExceptionHandler
+        if (sd2 == 4) {
+            logger.error("Server can't perform operation while side2=4");
+            throw new InternalServerErrorException();
+        }
 
-        logger.info("Normal work. Provided sides: side1="+side1+", side2="+side2+", side3="+side3);
+        logger.info("Normal work. Provided sides: side1={}, side2={}, side3={}", side1, side2, side3);
         return new ResponseEntity<>(new TriangleAnalyzer(service.isEquilateral(sd1, sd2, sd3),
                 service.isIsosceles(sd1, sd2, sd3),
                 service.isRectangular(sd1, sd2, sd3)), HttpStatus.OK);
     }
+
+
     @RequestMapping("/insert")
-    public ResponseEntity<?> insertTriangle(){
-        throw new OperationNotImplementedException("PUT request is in development");
+    public ResponseEntity<?> insertTriangle() {
+        logger.error("PUT request is in development");
+        throw new OperationNotImplementedException();
     }
 }
 
