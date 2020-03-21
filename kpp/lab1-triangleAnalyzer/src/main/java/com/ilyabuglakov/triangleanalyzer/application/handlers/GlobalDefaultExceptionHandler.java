@@ -1,4 +1,4 @@
-package com.ilyabuglakov.triangleanalyzer.application;
+package com.ilyabuglakov.triangleanalyzer.application.handlers;
 
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.http.HttpStatus;

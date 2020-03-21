@@ -1,6 +1,6 @@
 package com.ilyabuglakov.triangleanalyzer.service;
 
-public class TriangleAnalyzerService {
+public class DefaultTriangleAnalyzerService implements ITriangleAnalyzerService {
 
     public boolean isEquilateral(int side1, int side2, int side3) {
         return side1 == side2 && side2 == side3;

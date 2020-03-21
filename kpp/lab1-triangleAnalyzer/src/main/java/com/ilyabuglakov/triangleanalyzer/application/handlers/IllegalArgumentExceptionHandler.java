@@ -1,6 +1,6 @@
-package com.ilyabuglakov.triangleanalyzer.application;
+package com.ilyabuglakov.triangleanalyzer.application.handlers;
 
-import com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController;
+import com.ilyabuglakov.triangleanalyzer.application.exceptions.IllegalArgumentException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

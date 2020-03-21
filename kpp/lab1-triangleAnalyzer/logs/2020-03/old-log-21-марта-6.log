@@ -1,0 +1,9 @@
+2020-03-21 23:07:27,654 [ERROR] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-1]
+Server can't perform operation while side2=4
+
+2020-03-21 23:07:27,656 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.InternalServerErrorExceptionHandler [http-nio-8080-exec-1]
+Internal server error
+
+2020-03-21 23:07:32,312 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-4]
+Normal work. Provided sides: side1=4, side2=3, side3=5
+

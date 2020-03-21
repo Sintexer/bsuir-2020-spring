@@ -9,32 +9,32 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
-public class TriangleAnalyzerServiceTest {
+public class DefaultTriangleAnalyzerServiceTest {
 
-    private TriangleAnalyzerService triangleAnalyzerService;
+    private DefaultTriangleAnalyzerService defaultTriangleAnalyzerService;
 
     @Before
     public void setup() {
-        triangleAnalyzerService = new TriangleAnalyzerService();
+        defaultTriangleAnalyzerService = new DefaultTriangleAnalyzerService();
     }
 
     @Test
     public void testIsEquilateral() {
-        assertTrue(triangleAnalyzerService.isEquilateral(2, 2, 2));
+        assertTrue(defaultTriangleAnalyzerService.isEquilateral(2, 2, 2));
     }
 
     @Test
     public void testIsIsosceles() {
-        assertTrue(triangleAnalyzerService.isIsosceles(3, 2, 2));
+        assertTrue(defaultTriangleAnalyzerService.isIsosceles(3, 2, 2));
     }
 
     @Test
     public void testIsRectangular() {
-        assertTrue(triangleAnalyzerService.isRectangular(3, 4, 5));
+        assertTrue(defaultTriangleAnalyzerService.isRectangular(3, 4, 5));
     }
 
     @Test
     public void testValidation(){
-        assertTrue(triangleAnalyzerService.validate(4,5,6));
+        assertTrue(defaultTriangleAnalyzerService.validate(4,5,6));
     }
 }

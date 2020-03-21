@@ -1,5 +1,6 @@
-package com.ilyabuglakov.triangleanalyzer.application;
+package com.ilyabuglakov.triangleanalyzer.application.handlers;
 
+import com.ilyabuglakov.triangleanalyzer.application.exceptions.InternalServerErrorException;
 import com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -7,15 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-
-
 @RestControllerAdvice
-public class OperationNotImplementedExceptionHandler implements ExceptionMapper<OperationNotImplementedException> {
+public class InternalServerErrorExceptionHandler implements ExceptionMapper<InternalServerErrorException> {
 
     @Override
-    @ExceptionHandler(OperationNotImplementedException.class)
-    public ResponseEntity<?> handle(OperationNotImplementedException e) {
-        String description = e.getMessage()!=null? e.getMessage(): "Operation is not implemented";
+    @ExceptionHandler(InternalServerErrorException.class)
+    public ResponseEntity<?> handle(InternalServerErrorException e) {
+        String description = e.getMessage()!=null? e.getMessage(): "Internal server error";
         TriangleAnalyzerController.logger.error(description);
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
