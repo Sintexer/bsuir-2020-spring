@@ -1,19 +1,15 @@
 package com.ilyabuglakov.triangleanalyzer.service;
 
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static org.junit.Assert.*;
-
-@RunWith(SpringRunner.class)
 public class DefaultTriangleAnalyzerServiceTest {
 
     private DefaultTriangleAnalyzerService defaultTriangleAnalyzerService;
 
-    @Before
+    @BeforeMethod
     public void setup() {
         defaultTriangleAnalyzerService = new DefaultTriangleAnalyzerService();
     }

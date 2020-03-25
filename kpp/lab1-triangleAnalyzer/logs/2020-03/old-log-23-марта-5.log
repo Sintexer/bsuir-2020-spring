@@ -1,0 +1,6 @@
+2020-03-23 20:44:58,517 [ERROR] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Such triangle can't exist: side1=4, side2=2, side3=55
+
+2020-03-23 20:45:15,813 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-4]
+Normal work. Provided sides: side1=4, side2=2, side3=5
+

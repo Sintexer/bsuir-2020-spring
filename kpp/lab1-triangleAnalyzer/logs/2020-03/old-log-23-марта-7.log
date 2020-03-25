@@ -1,0 +1,36 @@
+2020-03-23 23:10:08,685 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Starting TriangleAnalyzerApplication on DESKTOP-004HKKP with PID 13804 (D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer\target\classes started by Neonl in D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer)
+
+2020-03-23 23:10:08,700 [INFO] org.springframework.boot.SpringApplication [main]
+No active profile set, falling back to default profiles: default
+
+2020-03-23 23:10:10,344 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main]
+Tomcat initialized with port(s): 8080 (http)
+
+2020-03-23 23:10:10,486 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main]
+Root WebApplicationContext: initialization completed in 1725 ms
+
+2020-03-23 23:10:10,722 [INFO] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main]
+Initializing ExecutorService 'applicationTaskExecutor'
+
+2020-03-23 23:10:10,968 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main]
+Tomcat started on port(s): 8080 (http) with context path ''
+
+2020-03-23 23:10:10,971 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Started TriangleAnalyzerApplication in 2.835 seconds (JVM running for 6.829)
+
+2020-03-23 23:10:41,549 [INFO] org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1]
+Initializing Servlet 'dispatcherServlet'
+
+2020-03-23 23:10:41,557 [INFO] org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1]
+Completed initialization in 7 ms
+
+2020-03-23 23:10:41,588 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-1]
+Normal work. Provided sides: side1=4, side2=2, side3=5
+
+2020-03-23 23:10:46,736 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [http-nio-8080-exec-3]
+Provided sides can't form a triangle: side1=4, side2=22, side3=5
+
+2020-03-23 23:10:53,620 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [http-nio-8080-exec-4]
+Provided sides can't form a triangle: side1=42, side2=22, side3=5
+

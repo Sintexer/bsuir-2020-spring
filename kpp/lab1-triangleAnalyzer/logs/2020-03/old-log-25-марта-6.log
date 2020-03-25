@@ -1,0 +1,18 @@
+2020-03-25 12:57:29,140 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [main]
+Bad request
+
+2020-03-25 12:57:29,173 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [main]
+
+
+2020-03-25 12:57:29,177 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.InternalServerErrorExceptionHandler [main]
+Internal Server Error
+
+2020-03-25 12:57:29,179 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.InternalServerErrorExceptionHandler [main]
+
+
+2020-03-25 12:57:29,189 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
+Internal Server Error
+
+2020-03-25 12:57:29,192 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
+
+

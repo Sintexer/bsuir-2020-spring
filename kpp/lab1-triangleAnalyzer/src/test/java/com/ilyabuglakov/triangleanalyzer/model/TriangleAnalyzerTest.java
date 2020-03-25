@@ -1,18 +1,17 @@
 package com.ilyabuglakov.triangleanalyzer.model;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.*;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
-@RunWith(SpringRunner.class)
+
 public class TriangleAnalyzerTest {
 
     private TriangleAnalyzer triangleAnalyzer;
 
-    @Before
+    @BeforeMethod
     public void setup(){
         triangleAnalyzer = new TriangleAnalyzer(true, true, false);
     }

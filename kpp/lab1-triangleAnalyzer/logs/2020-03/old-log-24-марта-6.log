@@ -1,0 +1,21 @@
+2020-03-24 23:29:32,432 [INFO] org.springframework.test.context.support.AbstractTestContextBootstrapper [main]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerControllerTest], using SpringBootContextLoader
+
+2020-03-24 23:29:32,462 [INFO] org.springframework.test.context.support.AbstractContextLoader [main]
+Could not detect default resource locations for test class [com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+2020-03-24 23:29:33,095 [INFO] org.springframework.test.context.support.AbstractTestContextBootstrapper [main]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@64df9a61, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@77602954, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@e260766, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2c3dec30, org.springframework.test.context.event.EventPublishingTestExecutionListener@34a97744]
+
+2020-03-24 23:29:34,231 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Starting TriangleAnalyzerControllerTest on DESKTOP-004HKKP with PID 16496 (D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer\target\test-classes started by Neonl in D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer)
+
+2020-03-24 23:29:34,243 [INFO] org.springframework.boot.SpringApplication [main]
+No active profile set, falling back to default profiles: default
+
+2020-03-24 23:29:34,964 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Started TriangleAnalyzerControllerTest in 1.634 seconds (JVM running for 7.321)
+
+2020-03-24 23:29:35,326 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [main]
+Normal work. Provided sides: side1=4, side2=3, side3=5
+

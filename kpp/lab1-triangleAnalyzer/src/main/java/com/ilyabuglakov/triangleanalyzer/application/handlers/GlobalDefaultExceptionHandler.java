@@ -1,29 +1,42 @@
-package com.ilyabuglakov.triangleanalyzer.application.handlers;
-
-import org.springframework.core.annotation.AnnotationUtils;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-import javax.servlet.http.HttpServletRequest;
-
-//@ControllerAdvice()
-//class GlobalDefaultExceptionHandler {
-//    public static final String DEFAULT_ERROR_VIEW = "error";
+//package com.ilyabuglakov.triangleanalyzer.application.handlers;
 //
-//    @ExceptionHandler(value = Exception.class)
-//    public ResponseEntity<?>
-//    defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
-//        if (AnnotationUtils.findAnnotation
-//                (e.getClass(), ResponseStatus.class) != null)
-//            throw e;
+//import com.ilyabuglakov.triangleanalyzer.application.ErrorView;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.web.method.HandlerMethod;
+//import org.springframework.web.servlet.HandlerExceptionResolver;
+//import org.springframework.web.servlet.ModelAndView;
 //
-//        return ResponseEntity
-//                .status(HttpStatus.BAD_REQUEST)
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .body(String.format("{\"error\":\"%s\"}", e.getMessage()));
+//import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletResponse;
+//
+//public class GlobalDefaultExceptionHandler implements HandlerExceptionResolver {
+//
+//    @Override
+//    public ModelAndView resolveException (HttpServletRequest request,
+//                                          HttpServletResponse response,
+//                                          Object handler,
+//                                          Exception ex) {
+//
+//        if (handler instanceof HandlerMethod) {
+//            HandlerMethod hm = (HandlerMethod) handler;
+//            ErrorView errorView = hm.getMethodAnnotation(ErrorView.class);
+//            if (errorView != null) {
+//                //preparing ModelAndView
+//                String viewName = errorView.value();
+//                ModelAndView model = new ModelAndView(viewName);
+//                model.addObject("requestUri", request.getRequestURI());
+//                model.addObject("exception", ex);
+//
+//                HttpStatus status = errorView.status();
+//                model.addObject("statusValue", status.value());
+//                model.addObject("statusStr", status.getReasonPhrase());
+//                //setting status code
+//                response.setStatus(status.value());
+//
+//                return model;
+//            }
+//        }
+//        //returning null for default processing
+//        return null;
 //    }
 //}

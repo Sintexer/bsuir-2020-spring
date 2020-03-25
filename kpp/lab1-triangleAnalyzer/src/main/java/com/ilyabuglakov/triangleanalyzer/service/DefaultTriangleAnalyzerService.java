@@ -1,5 +1,8 @@
 package com.ilyabuglakov.triangleanalyzer.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class DefaultTriangleAnalyzerService implements ITriangleAnalyzerService {
 
     public boolean isEquilateral(int side1, int side2, int side3) {

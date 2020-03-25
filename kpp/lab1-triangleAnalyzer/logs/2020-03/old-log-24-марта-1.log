@@ -1,0 +1,9 @@
+2020-03-24 23:21:47,053 [INFO] org.springframework.test.context.support.AbstractTestContextBootstrapper [main]
+Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerControllerTest], using SpringBootContextLoader
+
+2020-03-24 23:21:47,083 [INFO] org.springframework.test.context.support.AbstractContextLoader [main]
+Could not detect default resource locations for test class [com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+
+2020-03-24 23:21:47,648 [INFO] org.springframework.test.context.support.AbstractTestContextBootstrapper [main]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2756c0a7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@350ec41e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@69637b10, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71984c3, org.springframework.test.context.event.EventPublishingTestExecutionListener@165b2f7f]
+

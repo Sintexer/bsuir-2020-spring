@@ -1,0 +1,27 @@
+2020-03-23 13:40:32,640 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Starting TriangleAnalyzerApplication on DESKTOP-004HKKP with PID 4588 (D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer\target\classes started by Neonl in D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer)
+
+2020-03-23 13:40:32,656 [INFO] org.springframework.boot.SpringApplication [main]
+No active profile set, falling back to default profiles: default
+
+2020-03-23 13:40:34,655 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main]
+Tomcat initialized with port(s): 8080 (http)
+
+2020-03-23 13:40:34,978 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main]
+Root WebApplicationContext: initialization completed in 2253 ms
+
+2020-03-23 13:40:35,190 [INFO] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main]
+Initializing ExecutorService 'applicationTaskExecutor'
+
+2020-03-23 13:40:35,415 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main]
+Tomcat started on port(s): 8080 (http) with context path ''
+
+2020-03-23 13:40:35,423 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Started TriangleAnalyzerApplication in 3.341 seconds (JVM running for 8.642)
+
+2020-03-23 13:40:35,786 [INFO] org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1]
+Initializing Servlet 'dispatcherServlet'
+
+2020-03-23 13:40:35,794 [INFO] org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1]
+Completed initialization in 7 ms
+

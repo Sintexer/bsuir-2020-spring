@@ -1,0 +1,45 @@
+2020-03-23 13:02:31,288 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Starting TriangleAnalyzerApplication on DESKTOP-004HKKP with PID 7488 (D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer\target\classes started by Neonl in D:\Repositories\2020-spring\kpp\lab1-triangleAnalyzer)
+
+2020-03-23 13:02:31,308 [INFO] org.springframework.boot.SpringApplication [main]
+No active profile set, falling back to default profiles: default
+
+2020-03-23 13:02:32,883 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main]
+Tomcat initialized with port(s): 8080 (http)
+
+2020-03-23 13:02:33,061 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main]
+Root WebApplicationContext: initialization completed in 1682 ms
+
+2020-03-23 13:02:33,357 [INFO] org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main]
+Initializing ExecutorService 'applicationTaskExecutor'
+
+2020-03-23 13:02:33,659 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main]
+Tomcat started on port(s): 8080 (http) with context path ''
+
+2020-03-23 13:02:33,663 [INFO] org.springframework.boot.StartupInfoLogger [main]
+Started TriangleAnalyzerApplication in 3.025 seconds (JVM running for 5.795)
+
+2020-03-23 13:02:39,370 [INFO] org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1]
+Initializing Servlet 'dispatcherServlet'
+
+2020-03-23 13:02:39,378 [INFO] org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1]
+Completed initialization in 8 ms
+
+2020-03-23 13:02:39,412 [ERROR] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-1]
+Such triangle can't exist: side1=4, side2=2, side3=55
+
+2020-03-23 13:02:43,523 [WARN] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-4]
+Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'side3' is not present]
+
+2020-03-23 13:02:59,314 [ERROR] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-5]
+Such triangle can't exist: side1=4, side2=2, side3=55
+
+2020-03-23 13:07:47,275 [ERROR] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-7]
+Such triangle can't exist: side1=4, side2=2, side3=55
+
+2020-03-23 13:07:58,221 [WARN] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-8]
+Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'side3' is not present]
+
+2020-03-23 13:07:59,021 [WARN] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-9]
+Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'side3' is not present]
+
