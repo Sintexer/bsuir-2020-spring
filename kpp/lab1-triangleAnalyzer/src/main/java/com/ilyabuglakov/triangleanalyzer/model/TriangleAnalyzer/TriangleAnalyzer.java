@@ -1,6 +1,6 @@
-package com.ilyabuglakov.triangleanalyzer.model;
+package com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
 
-public class TriangleAnalyzer {
+public class TriangleAnalyzer implements ITriangleAnalyzer {
     public boolean equilateral, isosceles, rectangular;
     public TriangleAnalyzer(boolean equilateral, boolean isosceles, boolean rectangular){
         this.equilateral = equilateral;

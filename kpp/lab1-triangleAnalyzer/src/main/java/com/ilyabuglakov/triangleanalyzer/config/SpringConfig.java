@@ -1,12 +1,14 @@
 package com.ilyabuglakov.triangleanalyzer.config;
 
-import com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController;
-import com.ilyabuglakov.triangleanalyzer.service.DefaultTriangleAnalyzerService;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SpringConfig {
+
+//    @Bean
+//    public TriangleCacher triangleCacher(){
+//        return new TriangleCacher();
+//    }
 
 //    @Bean
 //    public DefaultTriangleAnalyzerService triangleAnalyzerService(){

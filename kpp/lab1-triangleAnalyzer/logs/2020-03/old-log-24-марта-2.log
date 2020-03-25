@@ -5,7 +5,7 @@ Starting TriangleAnalyzerControllerTest on DESKTOP-004HKKP with PID 3184 (D:\Rep
 No active profile set, falling back to default profiles: default
 
 2020-03-24 23:21:48,768 [WARN] org.springframework.context.support.AbstractApplicationContext [main]
-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 
 2020-03-24 23:21:48,856 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main]
 
@@ -16,7 +16,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field service in com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController required a bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' that could not be found.
+Field service in com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController required a bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -24,7 +24,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' in your configuration.
+Consider defining a bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' in your configuration.
 
 
 2020-03-24 23:21:48,858 [ERROR] org.springframework.test.context.TestContextManager [main]
@@ -62,7 +62,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.testng.TestNG.run(TestNG.java:1007) [testng-7.1.0.jar:?]
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110) [testng-rt.jar:?]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
@@ -83,7 +83,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	... 30 more
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1695) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1253) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
@@ -114,7 +114,7 @@ Starting TriangleAnalyzerControllerTest on DESKTOP-004HKKP with PID 3184 (D:\Rep
 No active profile set, falling back to default profiles: default
 
 2020-03-24 23:21:49,237 [WARN] org.springframework.context.support.AbstractApplicationContext [main]
-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 
 2020-03-24 23:21:49,239 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main]
 
@@ -125,7 +125,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field service in com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController required a bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' that could not be found.
+Field service in com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController required a bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -133,7 +133,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' in your configuration.
+Consider defining a bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' in your configuration.
 
 
 2020-03-24 23:21:49,240 [WARN] org.springframework.test.context.TestContextManager [main]
@@ -177,7 +177,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.testng.TestNG.run(TestNG.java:1007) [testng-7.1.0.jar:?]
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110) [testng-rt.jar:?]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
@@ -198,7 +198,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	... 36 more
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1695) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1253) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
@@ -229,7 +229,7 @@ Starting TriangleAnalyzerControllerTest on DESKTOP-004HKKP with PID 3184 (D:\Rep
 No active profile set, falling back to default profiles: default
 
 2020-03-24 23:21:49,402 [WARN] org.springframework.context.support.AbstractApplicationContext [main]
-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 
 2020-03-24 23:21:49,405 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main]
 
@@ -240,7 +240,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field service in com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController required a bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' that could not be found.
+Field service in com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController required a bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -248,7 +248,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' in your configuration.
+Consider defining a bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' in your configuration.
 
 
 2020-03-24 23:21:49,406 [WARN] org.springframework.test.context.TestContextManager [main]
@@ -292,7 +292,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.testng.TestNG.run(TestNG.java:1007) [testng-7.1.0.jar:?]
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110) [testng-rt.jar:?]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'triangleAnalyzerController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
@@ -313,7 +313,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	... 36 more
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1695) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1253) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.4.RELEASE.jar:5.2.4.RELEASE]

@@ -2,9 +2,9 @@ package com.ilyabuglakov.triangleanalyzer.controller;
 
 import com.ilyabuglakov.triangleanalyzer.application.exceptions.IllegalArgumentException;
 import com.ilyabuglakov.triangleanalyzer.application.exceptions.InternalServerErrorException;
-import com.ilyabuglakov.triangleanalyzer.application.exceptions.OperationNotImplementedException;
-import com.ilyabuglakov.triangleanalyzer.service.ITriangleAnalyzerService;
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.service.TriangleCacher.TriangleCacher;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Controller
-public class TriangleAnalyzerController {
+public class TriangleAnalyzerController implements ITriangleAnalyzerController {
 
     static final public Logger logger = LogManager.getLogger(TriangleAnalyzerController.class.getName());
 
     @Autowired
     ITriangleAnalyzerService service;
+
+    @Autowired
+    TriangleCacher<TriangleAnalyzer> cacher;
 
     @RequestMapping("/triangle-analyzer")
     public ResponseEntity<?> triangleAnalyzer(@RequestParam(value = "side1", required = true) String side1,
@@ -30,10 +33,6 @@ public class TriangleAnalyzerController {
                                               @RequestParam(value = "side3", required = true) String side3)
     throws IllegalArgumentException, InternalServerErrorException   {
         Integer sd1 = Integer.valueOf(side1), sd2 = Integer.valueOf(side2), sd3 = Integer.valueOf(side3);
-
-        //Check of InternalServerErrorExceptionHandler
-        if (sd2 == 4)
-            throw new InternalServerErrorException("Server can't perform operation while side2=4");
 
         //Triangle validation
         if (!service.validate(sd1, sd2, sd3)) {
@@ -43,20 +42,14 @@ public class TriangleAnalyzerController {
                             side1, side2, side3));
         }
 
-
+        TriangleAnalyzer response;
+        response = cacher.contains(side1,side2,side3) ?
+                cacher.get(side1,side2,side3):
+                cacher.put(side1, side2, side3, service.formResponse(sd1, sd2, sd3));
 
         logger.info("Normal work. Provided sides: side1={}, side2={}, side3={}", side1, side2, side3);
-        return new ResponseEntity<>(new TriangleAnalyzer(
-                service.isEquilateral(sd1, sd2, sd3),
-                service.isIsosceles(sd1, sd2, sd3),
-                service.isRectangular(sd1, sd2, sd3)),
-                HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-
-    @RequestMapping("/insert")
-    public ResponseEntity<?> insertTriangle() throws OperationNotImplementedException {
-        throw new OperationNotImplementedException("POST request is in development");
-    }
 }
 

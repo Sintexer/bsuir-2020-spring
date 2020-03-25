@@ -31,6 +31,10 @@
             <AppenderRef ref="RollingFile"/>
             <AppenderRef ref ="Console"/>
         </Logger>
+        <Logger name="com.ilyabuglakov.triangleanalyzer.service" level="trace" additivity="false">
+            <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref ="Console"/>
+        </Logger>
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>

@@ -1,18 +1,6 @@
-2020-03-25 12:57:29,140 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [main]
-Bad request
+2020-03-25 22:23:36,857 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Normal work. Provided sides: side1=4, side2=3, side3=5
 
-2020-03-25 12:57:29,173 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [main]
-
-
-2020-03-25 12:57:29,177 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.InternalServerErrorExceptionHandler [main]
-Internal Server Error
-
-2020-03-25 12:57:29,179 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.InternalServerErrorExceptionHandler [main]
-
-
-2020-03-25 12:57:29,189 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
-Internal Server Error
-
-2020-03-25 12:57:29,192 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
-
+2020-03-25 22:23:45,438 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=4, side2=3, side3=5
 

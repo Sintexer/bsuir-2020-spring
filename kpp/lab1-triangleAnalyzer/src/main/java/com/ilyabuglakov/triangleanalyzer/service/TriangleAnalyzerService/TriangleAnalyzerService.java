@@ -1,9 +1,17 @@
-package com.ilyabuglakov.triangleanalyzer.service;
+package com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService;
 
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DefaultTriangleAnalyzerService implements ITriangleAnalyzerService {
+public class TriangleAnalyzerService implements ITriangleAnalyzerService {
+
+    public TriangleAnalyzer formResponse(int side1, int side2, int side3){
+        return new TriangleAnalyzer(
+                isEquilateral(side1, side2, side3),
+                isIsosceles(side1, side2, side3),
+                isRectangular(side1, side2, side3));
+    }
 
     public boolean isEquilateral(int side1, int side2, int side3) {
         return side1 == side2 && side2 == side3;

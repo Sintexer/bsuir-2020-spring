@@ -1,6 +1,9 @@
-2020-03-25 12:54:23,505 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
-Internal Server Error
+2020-03-25 22:20:35,101 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=4, side2=3, side3=5
 
-2020-03-25 12:54:23,597 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
+2020-03-25 22:20:39,203 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Normal work. Provided sides: side1=4, side2=3, side3=5
 
+2020-03-25 22:20:58,159 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-4]
+Normal work. Provided sides: side1=4, side2=3, side3=5
 
