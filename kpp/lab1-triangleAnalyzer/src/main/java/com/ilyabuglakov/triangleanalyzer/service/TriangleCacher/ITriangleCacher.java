@@ -16,15 +16,17 @@ public interface ITriangleCacher<T> {
 
     T put(String key, T element);
 
-    T put(String s1, String s2, String s3, T elemment);
+    T put(String s1, String s2, String s3, T element);
 
-    T put(int s1, int s2, int s3, T elemment);
+    T put(int s1, int s2, int s3, T element);
 
     boolean contains(String key);
 
     boolean contains(int s1, int s2, int s3);
 
     boolean contains(String s1, String s2, String s3);
+
+    boolean contains(T element);
 
     String formKey(int s1, int s2, int s3);
 

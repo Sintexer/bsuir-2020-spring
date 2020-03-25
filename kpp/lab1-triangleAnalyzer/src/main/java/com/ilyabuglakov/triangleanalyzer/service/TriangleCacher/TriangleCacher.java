@@ -1,7 +1,6 @@
 package com.ilyabuglakov.triangleanalyzer.service.TriangleCacher;
 
 import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.ITriangleAnalyzer;
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -38,12 +37,12 @@ public class TriangleCacher<T extends ITriangleAnalyzer> implements ITriangleCac
         return element;
     }
 
-    public T put(String s1, String s2, String s3, T elemment) {
-        return put(formKey(s1, s2, s3), elemment);
+    public T put(String s1, String s2, String s3, T element) {
+        return put(formKey(s1, s2, s3), element);
     }
 
-    public T put(int s1, int s2, int s3, T elemment) {
-        return put(formKey(s1, s2, s3), elemment);
+    public T put(int s1, int s2, int s3, T element) {
+        return put(formKey(s1, s2, s3), element);
     }
 
     public boolean contains(String key) {
@@ -56,6 +55,10 @@ public class TriangleCacher<T extends ITriangleAnalyzer> implements ITriangleCac
 
     public boolean contains(String s1, String s2, String s3) {
         return contains(formKey(s1, s2, s3));
+    }
+
+    public boolean contains(T element){
+        return repository.contains(element);
     }
 
     public String formKey(int s1, int s2, int s3) {
