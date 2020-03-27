@@ -1,0 +1,12 @@
+2020-03-27 20:16:23,281 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-1]
+Cached new element with key=3-3-5
+
+2020-03-27 20:16:23,282 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-1]
+Normal work. Provided sides: side1=3, side2=3, side3=5
+
+2020-03-27 20:16:26,148 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Returned existing response from cache with key=3-3-5
+
+2020-03-27 20:16:26,148 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=3, side2=3, side3=5
+

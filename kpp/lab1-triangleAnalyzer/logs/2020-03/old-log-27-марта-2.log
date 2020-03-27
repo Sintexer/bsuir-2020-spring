@@ -1,0 +1,30 @@
+2020-03-27 20:01:38,133 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-2]
+Cached new element with key=3-3-5
+
+2020-03-27 20:01:38,135 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Normal work. Provided sides: side1=3, side2=3, side3=5
+
+2020-03-27 20:01:39,221 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Returned existing response from cache with key=3-3-5
+
+2020-03-27 20:01:39,222 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=3, side2=3, side3=5
+
+2020-03-27 20:01:40,538 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-4]
+Returned existing response from cache with key=3-3-5
+
+2020-03-27 20:01:40,540 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-4]
+Normal work. Provided sides: side1=3, side2=3, side3=5
+
+2020-03-27 20:01:47,246 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [http-nio-8080-exec-5]
+Provided sides can't form a triangle: side1=4, side2=33, side3=5
+
+2020-03-27 20:01:48,247 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [http-nio-8080-exec-7]
+Provided sides can't form a triangle: side1=4, side2=33, side3=5
+
+2020-03-27 20:01:51,985 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-9]
+Returned existing response from cache with key=3-3-5
+
+2020-03-27 20:01:51,985 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-9]
+Normal work. Provided sides: side1=3, side2=3, side3=5
+

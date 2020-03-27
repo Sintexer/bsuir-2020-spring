@@ -1,6 +1,6 @@
 package com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService;
 
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
 
 public interface ITriangleAnalyzerService {
     TriangleAnalyzer formResponse(int side1, int side2, int side3);

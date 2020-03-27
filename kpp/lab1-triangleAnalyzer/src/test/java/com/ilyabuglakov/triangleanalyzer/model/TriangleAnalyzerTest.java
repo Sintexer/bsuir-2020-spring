@@ -1,6 +1,5 @@
 package com.ilyabuglakov.triangleanalyzer.model;
 
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

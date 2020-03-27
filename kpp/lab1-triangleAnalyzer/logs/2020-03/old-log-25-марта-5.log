@@ -1,6 +1,18 @@
-2020-03-25 22:23:36,857 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+2020-03-25 22:25:56,559 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
 Normal work. Provided sides: side1=4, side2=3, side3=5
 
-2020-03-25 22:23:45,438 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+2020-03-25 22:25:59,635 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=4, side2=3, side3=5
+
+2020-03-25 22:26:03,062 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-4]
+Normal work. Provided sides: side1=4, side2=3, side3=5
+
+2020-03-25 22:26:21,416 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-5]
+Normal work. Provided sides: side1=4, side2=3, side3=6
+
+2020-03-25 22:26:24,141 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-6]
+Normal work. Provided sides: side1=4, side2=3, side3=6
+
+2020-03-25 22:26:28,679 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-7]
 Normal work. Provided sides: side1=4, side2=3, side3=5
 

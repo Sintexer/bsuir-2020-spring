@@ -2,9 +2,10 @@ package com.ilyabuglakov.triangleanalyzer.controller;
 
 import com.ilyabuglakov.triangleanalyzer.application.exceptions.IllegalArgumentException;
 import com.ilyabuglakov.triangleanalyzer.application.exceptions.InternalServerErrorException;
+import com.ilyabuglakov.triangleanalyzer.service.RequestCounter;
 import com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.ITriangleAnalyzerService;
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
-import com.ilyabuglakov.triangleanalyzer.service.TriangleCacher.TriangleCacher;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.service.TriangleCacher;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Controller
-public class TriangleAnalyzerController implements ITriangleAnalyzerController {
+public class TriangleAnalyzerController{
 
     static final public Logger logger = LogManager.getLogger(TriangleAnalyzerController.class.getName());
 
     @Autowired
     ITriangleAnalyzerService service;
-
+    @Autowired
+    RequestCounter counter;
     @Autowired
     TriangleCacher<TriangleAnalyzer> cacher;
 
@@ -42,6 +44,7 @@ public class TriangleAnalyzerController implements ITriangleAnalyzerController {
                             side1, side2, side3));
         }
 
+        counter.increment();
         TriangleAnalyzer response;
         response = cacher.contains(side1,side2,side3) ?
                 cacher.get(side1,side2,side3):
@@ -49,6 +52,11 @@ public class TriangleAnalyzerController implements ITriangleAnalyzerController {
 
         logger.info("Normal work. Provided sides: side1={}, side2={}, side3={}", side1, side2, side3);
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @RequestMapping("/request-count")
+    public ResponseEntity<?> getCount(){
+        return new ResponseEntity<>(counter.getValue(), HttpStatus.OK);
     }
 
 }

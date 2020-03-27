@@ -1,11 +1,10 @@
-package com.ilyabuglakov.triangleanalyzer.service.TriangleCacher;
+package com.ilyabuglakov.triangleanalyzer.service;
 
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.service.TriangleCacher;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 public class TriangleCacherTest {
 

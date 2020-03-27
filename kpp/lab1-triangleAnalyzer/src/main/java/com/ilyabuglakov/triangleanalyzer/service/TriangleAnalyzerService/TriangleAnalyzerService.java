@@ -1,6 +1,6 @@
 package com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService;
 
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
 import org.springframework.stereotype.Service;
 
 @Service
