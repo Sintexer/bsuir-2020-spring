@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\Projects\Cpp\SPOVM\SPOVM-Lab1-Time\SPOVM-Lab1-Time\Source.cpp(7,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  SPOVM-Lab1-Time.vcxproj -> D:\Projects\Cpp\SPOVM\SPOVM-Lab1-Time\Debug\SPOVM-Lab1-Time.exe

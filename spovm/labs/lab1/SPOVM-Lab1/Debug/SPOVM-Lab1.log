@@ -1,0 +1,3 @@
+﻿  SPOVM-Lab1.cpp
+D:\Projects\Cpp\SPOVM\SPOVM-Lab1\SPOVM-Lab1\SPOVM-Lab1.cpp(13,7): warning C4101: bProcess: неиспользованная локальная переменная
+  SPOVM-Lab1.vcxproj -> D:\Projects\Cpp\SPOVM\SPOVM-Lab1\Debug\SPOVM-Lab1.exe
