@@ -1,0 +1,10 @@
+debug/btree.o
+debug/catalog.o
+debug/coder.o
+debug/main.o
+debug/mainwindow.o
+debug/node.o
+debug/nodecomparator.o
+debug/nodeval.o
+debug/treeformer.o
+debug/moc_mainwindow.o
