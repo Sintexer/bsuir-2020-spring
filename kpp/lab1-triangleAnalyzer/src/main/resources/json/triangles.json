@@ -1,0 +1,14 @@
+{
+  "triangles": [
+    {
+      "side1": 3,
+      "side2": 4,
+      "side3": 5
+    },
+    {
+      "side1": 4,
+      "side2": 4,
+      "side3": 4
+    }
+  ]
+}
