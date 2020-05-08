@@ -9,7 +9,6 @@
 
 // Добавьте сюда заголовочные файлы для предварительной компиляции
 #include "framework.h"
-#include <windows.h>
 #include <iostream>
 #include <stdio.h>
 #include <list>
