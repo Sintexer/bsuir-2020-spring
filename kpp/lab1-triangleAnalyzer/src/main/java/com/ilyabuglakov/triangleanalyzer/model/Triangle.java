@@ -5,6 +5,8 @@ public class Triangle {
     private int side2;
     private int side3;
 
+    public Triangle(int sd1, int sd2, int sd3){ side1 = sd1; side2 = sd2; side3 = sd3; }
+
     public int getSide1() {
         return side1;
     }

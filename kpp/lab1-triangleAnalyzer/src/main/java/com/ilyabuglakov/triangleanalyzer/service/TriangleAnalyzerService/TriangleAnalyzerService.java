@@ -1,13 +1,15 @@
 package com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService;
 
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.model.Triangle;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAttributes;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TriangleAnalyzerService implements ITriangleAnalyzerService {
 
-    public TriangleAnalyzer formResponse(int side1, int side2, int side3){
-        return new TriangleAnalyzer(
+    public TriangleAttributes formResponse(int side1, int side2, int side3){
+        return new TriangleAttributes(
+                new Triangle(side1, side2, side3),
                 isEquilateral(side1, side2, side3),
                 isIsosceles(side1, side2, side3),
                 isRectangular(side1, side2, side3));
@@ -17,8 +19,16 @@ public class TriangleAnalyzerService implements ITriangleAnalyzerService {
         return side1 == side2 && side2 == side3;
     }
 
+    public boolean isEquilateral(Triangle t){
+        return isEquilateral(t.getSide1(), t.getSide2(), t.getSide3());
+    }
+
     public boolean isIsosceles(int side1, int side2, int side3) {
         return side1 == side2 || side2 == side3 || side1 == side3;
+    }
+
+    public boolean isIsosceles(Triangle t){
+        return isIsosceles(t.getSide1(), t.getSide2(), t.getSide3());
     }
 
     public boolean isRectangular(int side1, int side2, int side3) {
@@ -27,15 +37,8 @@ public class TriangleAnalyzerService implements ITriangleAnalyzerService {
                 rectangularCondition(side1, side3, side2);
     }
 
-    public boolean validate(int side1, int side2, int side3) {
-        return validationCondition(side1, side2, side3) &&
-                validationCondition(side1, side3, side2) &&
-                validationCondition(side2,side3, side1) &&
-                (side1>0&&side2>0&&side3>0);
-    }
-
-    private boolean validationCondition(int side1, int side2, int side3) {
-        return side1 + side2 > side3;
+    public boolean isRectangular(Triangle t){
+        return isIsosceles(t.getSide1(), t.getSide2(), t.getSide3());
     }
 
     private boolean rectangularCondition(int side1, int side2, int side3) {

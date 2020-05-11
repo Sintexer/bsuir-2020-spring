@@ -9,29 +9,29 @@ import static org.testng.Assert.assertTrue;
 
 public class TriangleAnalyzerTest {
 
-    private TriangleAnalyzer triangleAnalyzer;
+    private TriangleAttributes triangleAttributes;
 
     @BeforeMethod
     public void setup(){
-        triangleAnalyzer = new TriangleAnalyzer(true, true, false);
+        triangleAttributes = new TriangleAttributes(new Triangle(4,4,4),true, true, false);
     }
 
     @Test
     public void testSetEquilaterial(){
-        triangleAnalyzer.setEquilateral(false);
-        assertFalse(triangleAnalyzer.isEquilateral());
+        triangleAttributes.setEquilateral(false);
+        assertFalse(triangleAttributes.isEquilateral());
     }
 
     @Test
     public void testSetIsosceles(){
-        triangleAnalyzer.setIsosceles(false);
-        assertFalse(triangleAnalyzer.isRectangular());
+        triangleAttributes.setIsosceles(false);
+        assertFalse(triangleAttributes.isRectangular());
     }
 
     @Test
     public void testSetRectangular(){
-        triangleAnalyzer.setRectangular(true);
-        assertTrue(triangleAnalyzer.isRectangular());
+        triangleAttributes.setRectangular(true);
+        assertTrue(triangleAttributes.isRectangular());
     }
 
 }

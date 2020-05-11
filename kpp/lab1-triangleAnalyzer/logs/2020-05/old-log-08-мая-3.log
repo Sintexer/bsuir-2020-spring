@@ -1,0 +1,6 @@
+2020-05-08 16:07:00,603 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-1]
+Normal work. Provided sides: side1=3, side2=4, side3=5
+
+2020-05-08 16:07:00,605 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-1]
+Cached new element with key=3-4-5
+

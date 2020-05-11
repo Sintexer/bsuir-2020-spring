@@ -1,6 +1,6 @@
 package com.ilyabuglakov.triangleanalyzer.service;
 
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAttributes;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
-public class TriangleCacher<T extends TriangleAnalyzer> {
+public class TriangleCacher<T extends TriangleAttributes> {
 
     private static Logger logger = LogManager.getLogger(TriangleCacher.class);
 

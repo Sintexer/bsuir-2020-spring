@@ -1,14 +1,14 @@
 package com.ilyabuglakov.triangleanalyzer.service;
 
-import com.ilyabuglakov.triangleanalyzer.model.TriangleAnalyzer;
-import com.ilyabuglakov.triangleanalyzer.service.TriangleCacher;
+import com.ilyabuglakov.triangleanalyzer.model.Triangle;
+import com.ilyabuglakov.triangleanalyzer.model.TriangleAttributes;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TriangleCacherTest {
 
-    private static TriangleCacher<TriangleAnalyzer> cacher;
+    private static TriangleCacher<TriangleAttributes> cacher;
     private int pr1, pr2, pr3;
     private String param1, param2, param3;
 
@@ -25,27 +25,27 @@ public class TriangleCacherTest {
 
     @Test
     public void testGet() {
-        TriangleAnalyzer ta = new TriangleAnalyzer(true, true, true);
+        TriangleAttributes ta = new TriangleAttributes(new Triangle(1,2,3),true, true, true);
         cacher.put("1-2-3", ta);
         Assert.assertEquals(cacher.get("1-2-3"), ta);
     }
 
     @Test
     public void testPut() {
-        TriangleAnalyzer ta = new TriangleAnalyzer(true, true, true);
+        TriangleAttributes ta = new TriangleAttributes(new Triangle(1,2,3), true, true, true);
         Assert.assertEquals(cacher.put("1-2-3", ta), ta);
     }
 
     @Test
     public void testContainsByKey() {
-        TriangleAnalyzer ta = new TriangleAnalyzer(true, true, true);
+        TriangleAttributes ta = new TriangleAttributes(new Triangle(1,2,3), true, true, true);
         cacher.put("1-2-3", ta);
         Assert.assertTrue(cacher.contains("1-2-3"));
     }
 
     @Test
     public void TestContainsByObject() {
-        TriangleAnalyzer ta = new TriangleAnalyzer(true, true, true);
+        TriangleAttributes ta = new TriangleAttributes(new Triangle(1,2,3),true, true, true);
         cacher.put("1-2-3", ta);
         Assert.assertTrue(cacher.contains(ta));
     }
