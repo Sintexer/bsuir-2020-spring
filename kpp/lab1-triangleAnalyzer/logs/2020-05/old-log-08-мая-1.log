@@ -1,21 +1,12 @@
-2020-05-08 14:42:53,944 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
-Normal work. Provided sides: side1=3, side2=3, side3=5
+2020-05-08 15:56:34,652 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=3, side2=4, side3=5
 
-2020-05-08 14:42:53,945 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-2]
-Cached new element with key=3-3-5
+2020-05-08 15:56:34,654 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Cached new element with key=3-4-5
 
-2020-05-08 14:43:04,574 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [http-nio-8080-exec-3]
-Provided sides can't form a triangle: side1=4, side2=33, side3=5
+2020-05-08 15:56:43,996 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-4]
+Normal work. Provided sides: side1=3, side2=4, side3=5
 
-2020-05-08 14:43:12,966 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-6]
-Normal work. Provided sides: side1=3, side2=3, side3=5
-
-2020-05-08 14:43:12,970 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-6]
-Returned existing response from cache with key=3-3-5
-
-2020-05-08 14:43:13,822 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-7]
-Normal work. Provided sides: side1=3, side2=3, side3=5
-
-2020-05-08 14:43:13,823 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-7]
-Returned existing response from cache with key=3-3-5
+2020-05-08 15:56:43,999 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-4]
+Returned existing response from cache with key=3-4-5
 

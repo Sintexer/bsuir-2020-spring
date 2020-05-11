@@ -1,16 +1,16 @@
 package com.ilyabuglakov.triangleanalyzer.model;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnalyzerRequestDto {
     private List<Triangle> triangles;
 
-    public List<Triangle> getTrianglesList() {
+    public List<Triangle> getTriangles() {
         return triangles;
     }
 
-    public void setTrianglesList(List<Triangle> trianglesList) {
-        this.triangles = trianglesList;
+    public void setTrianglesList(List<Triangle> triangles) {
+        this.triangles = triangles;
     }
 }

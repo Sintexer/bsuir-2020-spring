@@ -13,7 +13,6 @@ public class RequestCounter {
     }
 
     public synchronized void increment(){
-        //System.out.println("Counter: "+i);
         i.incrementAndGet();
     }
 

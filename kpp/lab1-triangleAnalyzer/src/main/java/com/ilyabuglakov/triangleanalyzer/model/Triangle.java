@@ -1,5 +1,7 @@
 package com.ilyabuglakov.triangleanalyzer.model;
 
+import java.util.Objects;
+
 public class Triangle {
     private int side1;
     private int side2;
@@ -29,5 +31,20 @@ public class Triangle {
 
     public void setSide3(int side3) {
         this.side3 = side3;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Triangle triangle = (Triangle) o;
+        return side1 == triangle.side1 &&
+                side2 == triangle.side2 &&
+                side3 == triangle.side3;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(side1, side2, side3);
     }
 }

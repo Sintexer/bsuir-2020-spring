@@ -1,18 +1,66 @@
 package com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService;
 
+import com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController;
+import com.ilyabuglakov.triangleanalyzer.model.AnalyzerResponseDto;
 import com.ilyabuglakov.triangleanalyzer.model.Triangle;
 import com.ilyabuglakov.triangleanalyzer.model.TriangleAttributes;
+import com.ilyabuglakov.triangleanalyzer.service.RequestCounter;
+import com.ilyabuglakov.triangleanalyzer.service.TriangleCacher;
+import com.ilyabuglakov.triangleanalyzer.service.Validator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
-public class TriangleAnalyzerService implements ITriangleAnalyzerService {
+import java.util.List;
+import java.util.stream.Collectors;
 
-    public TriangleAttributes formResponse(int side1, int side2, int side3){
+@Service
+public class TriangleAnalyzerService {
+
+    static final public Logger logger = LogManager.getLogger(TriangleAnalyzerController.class.getName());
+
+    @Autowired
+    TriangleCacher<TriangleAttributes> cacher;
+    @Autowired
+    RequestCounter counter;
+
+    public long getCounterValue(){
+        return counter.getValue();
+    }
+
+    public TriangleAttributes formResponse(int sd1, int sd2, int sd3){
+        counter.increment();
+        Validator.validate(sd1, sd2, sd3);
+        logger.info("Normal work. Provided sides: side1={}, side2={}, side3={}", sd1, sd2, sd3);
+        return useCache(sd1, sd2, sd3);
+    }
+
+    public AnalyzerResponseDto formResponse(List<Triangle> triangles){
+        counter.increment();
+        final long total = triangles.stream().count(),
+                unique = triangles.stream().distinct().count();
+        List<Triangle> validList = triangles.stream().distinct().filter(t -> Validator.softValidate(t)).collect(Collectors.toList());
+        return new AnalyzerResponseDto(
+                total, unique, unique - validList.stream().count(),
+                validList.stream().filter(t -> Validator.softValidate(t)).map(t ->{
+                    return formResponse(t.getSide1(), t.getSide2(), t.getSide3());
+                }).collect(Collectors.toList()));
+    }
+
+    private TriangleAttributes useCache(int sd1, int sd2, int sd3){
+        TriangleAttributes response = cacher.contains(sd1,sd2,sd3) ?
+                cacher.get(sd1,sd2,sd3):
+                cacher.put(sd1, sd2, sd3, getAnalysis(sd1, sd2, sd3));
+        return response;
+    }
+
+    public TriangleAttributes getAnalysis(int sd1, int sd2, int sd3){
         return new TriangleAttributes(
-                new Triangle(side1, side2, side3),
-                isEquilateral(side1, side2, side3),
-                isIsosceles(side1, side2, side3),
-                isRectangular(side1, side2, side3));
+                new Triangle(sd1, sd2, sd3),
+                isEquilateral(sd1, sd2, sd3),
+                isIsosceles(sd1, sd2, sd3),
+                isRectangular(sd1, sd2, sd3));
     }
 
     public boolean isEquilateral(int side1, int side2, int side3) {

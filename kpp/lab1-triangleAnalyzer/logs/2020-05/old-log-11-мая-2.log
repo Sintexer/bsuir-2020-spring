@@ -1,0 +1,24 @@
+2020-05-11 20:33:40,421 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+[com.ilyabuglakov.triangleanalyzer.model.Triangle@7d2c61a3, com.ilyabuglakov.triangleanalyzer.model.Triangle@3c0ba220, com.ilyabuglakov.triangleanalyzer.model.Triangle@4ee4f6cd]
+
+2020-05-11 20:33:40,423 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Entered bulk method
+
+2020-05-11 20:33:40,429 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Normal work. Provided sides: side1=12, side2=13, side3=14
+
+2020-05-11 20:33:40,431 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-2]
+Cached new element with key=12-13-14
+
+2020-05-11 20:33:40,432 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Normal work. Provided sides: side1=3, side2=4, side3=5
+
+2020-05-11 20:33:40,433 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-2]
+Cached new element with key=3-4-5
+
+2020-05-11 20:33:40,434 [INFO] com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController [http-nio-8080-exec-2]
+Normal work. Provided sides: side1=4, side2=4, side3=4
+
+2020-05-11 20:33:40,435 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-2]
+Cached new element with key=4-4-4
+
