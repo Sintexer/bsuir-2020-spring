@@ -17,4 +17,4 @@ int main() {
 	WaitForSingleObject(writer, INFINITE);
 	CloseHandle(writer);
 	CloseHandle(event);
-}¸
+}
