@@ -1,2 +1,6 @@
 spovm/labs/lab5/windows/ThreadLib/.vs/ThreadLib/v16/Browse.VC.opendb
 spovm/labs/lab5/windows/ThreadLib/.vs/ThreadLib/v16/ipch/4238cc884bb6b0fc.ipch
+*.opendb
+*.db
+*.pdb
+*.ipch
