@@ -1,0 +1,14 @@
+﻿  Source.cpp
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(38,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char (*)[64]"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(39,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(40,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(41,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(42,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(43,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(51,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char (*)[64]"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(52,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(53,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(54,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(55,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "char *"
+D:\Repositories\2020-spring\spovm\labs\lab6\lab6\lab6\Source.cpp(116,26): warning C4838: Преобразование из "size_t" в "long" требует сужающего преобразования.
+  lab6.vcxproj -> D:\Repositories\2020-spring\spovm\labs\lab6\lab6\Debug\lab6.exe
