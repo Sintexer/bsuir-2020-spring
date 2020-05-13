@@ -1,4 +1,4 @@
-#include "filewriter.h"
+    #include "filewriter.h"
 
 FileWriter::~FileWriter(){
     if(out.isOpen())

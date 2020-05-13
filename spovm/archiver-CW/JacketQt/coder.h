@@ -1,4 +1,4 @@
-#ifndef CODER_H
+    #ifndef CODER_H
 #define CODER_H
 
 #include "pch.h"
@@ -7,19 +7,19 @@
 class Coder
 {
 private:
-    QString source;
     QString buffer;
-    QChar prev;
+    char prev;
     bool leftPrev;
     short prevSize;
     QMap<QChar, QString> dictionary;
-    FileWriter fw;
 
 public:
     Coder():leftPrev(false), prevSize(0) {}
-    void setSource(QString src);
+    bool hasPrev();
+    char getPrev();
     void setDictionary(QMap<QChar, QString>& dict);
-    QString getNextCodeBuffer();
+    string encode(QChar sb);
+    string getNextCodeBuffer(QString source);
 };
 
 #endif // CODER_H

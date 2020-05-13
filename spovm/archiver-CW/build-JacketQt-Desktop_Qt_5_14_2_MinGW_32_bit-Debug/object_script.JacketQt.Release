@@ -1,10 +1,10 @@
 release/btree.o
 release/catalog.o
 release/coder.o
+release/filewriter.o
 release/main.o
 release/mainwindow.o
 release/node.o
 release/nodecomparator.o
-release/nodeval.o
 release/treeformer.o
 release/moc_mainwindow.o

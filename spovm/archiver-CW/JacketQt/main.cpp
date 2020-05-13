@@ -5,6 +5,7 @@
 #include "node.h"
 #include "treeformer.h"
 #include "coder.h"
+#include <fstream>
 
 
 #include <QApplication>
@@ -29,6 +30,9 @@ int main(int argc, char *argv[])
     QString info;
     QFile file_in("input.txt");
     QFile file_out("output.txt");
+    file_out.close();
+    using namespace std;
+    ofstream out("output.txt");
     qDebug() << "Started\n";
     if(!file_in.open(QFile::ReadOnly)){
         qDebug() << "Can't open input file";
@@ -49,7 +53,12 @@ int main(int argc, char *argv[])
     for(auto a: maper.keys()){
         qDebug() << a << ":" << maper[a];
     }
-    file_out.write(info.toLocal8Bit());
+    //qDebug() << coder.getNextCodeBuffer(info);
+    out<<coder.getNextCodeBuffer(info);
+    if(coder.hasPrev())
+        out << coder.getPrev();
+    //file_out.write(.);
+    out.close();
     file_in.close();
     file_out.close();
 
