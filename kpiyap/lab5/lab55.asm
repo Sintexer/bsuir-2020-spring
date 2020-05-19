@@ -15,6 +15,7 @@ buffer db 200 dup (?)
 buffer_len dw 200
 buf_len equ 200
 
+bad_cmd_line_str db "ERROR: bad command line args", 10, 13, "$"
 input_error_str db "ERROR: first substring is too short", 10, 13, "$"
 file_open_error_str db "ERROR: Can't open input file", 10, 13, "$"
 temp_file_error_str db "ERROR: Can't open temp file", 10, 13, "$"
@@ -25,6 +26,11 @@ not_enough_cmdl_len_str db "ERROR: Not enough command line arguments.", 10, 13, 
 too_many_args_str db "ERROR: Provided to many arguments", 10, 13, "$"
 cmd_line_example_str db "Example: lab55.exe [inputfile.txt] [", 22h, "first_substr", 22h, "] [", 22h, "second_substr", 22h,"]", 10, 13, "$"
 
+program_start_str db "Program start", 10, 13, "$"
+processing_cmd_str db "processing cmd line", 10, 13, "$"
+cdm_line_parsed_str db "Command line processed", 10, 13, "$"
+program_end_str db "End successfully", 10, 13, "$"
+
 
 .code
 jmp start
@@ -33,10 +39,14 @@ print_str MACRO out_str   				;Prints str to screen
         push ax
         push dx   
         push di
+        push ds
+        mov ax, @data 
+        mov ds, ax
         xor di, di
 		MOV AH, 09h
 		MOV DX, OFFSET out_str
 		INT 21h 
+		pop ds
 		pop di   
 		pop dx
 		pop ax
@@ -300,7 +310,7 @@ parse_cmd proc 							;Reads input file path from cmd, and then call proc, that 
 		print_str too_many_args_str
 		print_str cmd_line_example_str
 		jmp bend
-	params_error:
+
 	params_end:
 	ret
 parse_cmd endp
@@ -310,7 +320,7 @@ read_cmdstr proc
 		
 		cmp [di], byte ptr 0dh 
 		jne rcmdstr_continue
-		jmp bend
+		jmp rcmdstr_param_error
 		rcmdstr_continue:
 		mov al, ' '
 		cmp [di], al
@@ -321,12 +331,11 @@ read_cmdstr proc
 		jmp rcmdstr_find_param
 	rcmdstr_before_read_param:
 		inc argc
-		cmp [di], byte ptr '"'
-		je rcmdstr_before_read_str
-		print_str cmd_line_example_str
-		jmp bend 
+		cmp [di], byte ptr '"'						
+		je rcmdstr_before_read_str					
+		jmp rcmdstr_param_error 					;Print error message if symbol is not "
 	rcmdstr_before_read_str:
-	    inc di
+	    inc di 										;Skip first "
 	rcmdstr_read_str:
 		cmp [di], byte ptr 0dh
 		je rcmdstr_param_error
@@ -340,6 +349,7 @@ read_cmdstr proc
 		jmp rcmdstr_read_str
 
 	rcmdstr_param_error:
+		print_str bad_cmd_line_str
 		print_str cmd_line_example_str
 		jmp bend
 	rcmdstr_end:
@@ -349,44 +359,48 @@ read_cmdstr endp
 
 start:
 	
+	print_str program_start_str
+	print_str processing_cmd_str
 	call parse_cmd
-	cmp argc, 3
+	print_str cdm_line_parsed_str
+
+	cmp argc, 3									;Check number of args if less than 3
 	je before_strlen
 	print_str not_enough_cmdl_len_str
 	print_str cmd_line_example_str
 	jmp bend
-	before_strlen:
+
+	before_strlen:								;Find lengths of substrings
 	strlen string 
-	cmp ax, 0
-	jne find_len_continue
+	cmp ax, 0									;Check if first substring is 0
+	jne find_len_continue	
 	print_str input_error_str
 	jmp bend
-	find_len_continue:
+	find_len_continue:							;Second substr can be 0
 	mov string_len, ax
 	strlen change 
 	mov change_len, ax
 
 	call open_file
 	call open_file_temp
-	next_buffer:
+
+	next_buffer: 								;Reads buffer from input file
 		read_buffer_from 0
 		mov cx, buffer_len
-		cmp cx, string_len
+		cmp cx, string_len						;If length of buffer less than length of substring
 		jge before_scasb
 
-		write_file handle_temp, buffer
-		jmp copy_temp_file
+		write_file handle_temp, buffer 			;Write last buffer to file
+		jmp copy_temp_file						;Copy temp to input
 
 	before_scasb:
 		mov di, offset buffer
-
-	continue_scasb:
 		mov al, string[0]
 		repne scasb
 		cmp cx, 0
-		jne after_scasb
+		jne after_scasb 						;If found first symbol of substring
 
-		mov cx, buffer_len
+		mov cx, buffer_len						;Flush buffer to temp file
 		write_file handle_temp, buffer
 		jmp next_buffer
 
@@ -433,13 +447,15 @@ start:
 			read_buffer_from 1
 
 			cmp buffer_len, 0
-			call write_eof
-			je close_files
+			
+			je write_end_of_file
 			
 			mov cx, buffer_len
 			write_file handle, buffer
 			jmp copy_next_buf
-
+	write_end_of_file:
+		call write_eof
+		print_str program_end_str
 	close_files:
 		call close_temp_file
 		call delete_temp_file
