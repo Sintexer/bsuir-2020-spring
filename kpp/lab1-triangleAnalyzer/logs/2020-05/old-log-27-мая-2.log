@@ -1,0 +1,33 @@
+2020-05-27 02:58:01,253 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [main]
+Bad request
+
+2020-05-27 02:58:01,275 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.IllegalArgumentExceptionHandler [main]
+
+
+2020-05-27 02:58:01,310 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.InternalServerErrorExceptionHandler [main]
+Internal Server Error
+
+2020-05-27 02:58:01,314 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.InternalServerErrorExceptionHandler [main]
+
+
+2020-05-27 02:58:01,327 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
+Internal Server Error
+
+2020-05-27 02:58:01,334 [ERROR] com.ilyabuglakov.triangleanalyzer.application.handlers.OperationNotImplementedExceptionHandler [main]
+
+
+2020-05-27 02:58:01,341 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [main]
+Cached new element with key=1-2-3
+
+2020-05-27 02:58:01,345 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [main]
+Cached new element with key=1-2-3
+
+2020-05-27 02:58:01,349 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [main]
+Cached new element with key=1-2-3
+
+2020-05-27 02:58:01,350 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [main]
+Returned existing response from cache with key=1-2-3
+
+2020-05-27 02:58:01,354 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [main]
+Cached new element with key=1-2-3
+

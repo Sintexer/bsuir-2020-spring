@@ -1,10 +1,14 @@
 package com.ilyabuglakov.triangleanalyzer.model;
 
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 public class Triangle {
+    @NotNull
     private int side1;
+    @NotNull
     private int side2;
+    @NotNull
     private int side3;
 
     public Triangle(int sd1, int sd2, int sd3){ side1 = sd1; side2 = sd2; side3 = sd3; }

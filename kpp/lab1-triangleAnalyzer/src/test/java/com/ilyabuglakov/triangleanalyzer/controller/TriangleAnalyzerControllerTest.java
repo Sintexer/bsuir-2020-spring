@@ -13,13 +13,13 @@ import org.testng.annotations.Test;
 @SpringBootTest(classes = TestSpringConfig.class)
 public class TriangleAnalyzerControllerTest extends AbstractTestNGSpringContextTests {
 
-//    private TriangleAnalyzerController controller;
-//
-//    @BeforeMethod
-//    private void initController() {
-//        controller = new TriangleAnalyzerController();
-//    }
-//
+    private TriangleAnalyzerController controller;
+
+    @BeforeMethod
+    private void initController() {
+        controller = new TriangleAnalyzerController();
+    }
+
 //    @Test(expectedExceptions = InternalServerErrorException.class)
 //    void testIllegalArgument() {
 //        String side1 = "3", side2 = "4", side3 = "5";
