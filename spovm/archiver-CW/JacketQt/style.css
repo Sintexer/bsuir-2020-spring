@@ -1,0 +1,47 @@
+/*QWidget{
+    background-color: #ffffff;
+}*/
+
+QPushButton {
+    /*border: 1px solid #0069c0;*/
+    border-radius: 3px;
+    background-color: #2196f3;
+    color:#ffffff;
+    font-size:12px;
+    font-weight:bold;
+    padding:5px 10px;
+    min-width: 40px;
+}
+
+QPushButton:pressed {
+    background-color: #6ec6ff;
+}
+
+QPushButton:hover {
+    background-color: #0c88eb;
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton#deleteButton {
+    background-color: #ff5252;
+}
+
+QPushButton#deleteButton:hover  {
+    background-color: #fc3a3a;
+}
+
+
+QPushButton#deleteButton:pressed  {
+    background-color: #ff867f;
+}
+
+QPushButton:!enabled , QPushButton#deleteButton:!enabled  {
+    background-color: #c7c7c7;
+}

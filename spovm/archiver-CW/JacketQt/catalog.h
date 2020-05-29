@@ -6,15 +6,13 @@
 class Catalog
 {
 private:
-    QMap<QChar, int> catalog;
+    QMap<char, int> catalog;
 public:
     Catalog(){}
-    Catalog(QString info);
+    Catalog(QByteArray info);
 
-    QMap<QChar, int>& add(QString info);
-    QMap<QChar, int>& getCatalog();
-    pair<QChar, int> takeTop();
-    bool empty();
+    QMap<char, int>& add(QByteArray info);
+    QMap<char, int>& getCatalog();
 };
 
 #endif // CATALOG_H

@@ -8,14 +8,14 @@
 class TreeFormer
 {
 private:
-    priority_queue<Node<int, QChar>*, vector<Node<int, QChar>*>, NodeComparator> nodes;
+    priority_queue<Node<int, char>*, vector<Node<int, char>*>, NodeComparator> nodes;
 public:
     TreeFormer() {};
-    TreeFormer(QMap<QChar, int> cat);
+    TreeFormer(QMap<char, int> cat);
 
-    void add(Node<int, QChar>* nw);
-    Node<int, QChar>* take();
-    Node<int, QChar>* formBTree();
+    void add(Node<int, char>* nw);
+    Node<int, char>* take();
+    Node<int, char>* formBTree();
 };
 
 #endif // TREEFORMER_H

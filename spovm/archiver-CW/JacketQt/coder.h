@@ -2,24 +2,32 @@
 #define CODER_H
 
 #include "pch.h"
-#include "filewriter.h"
 
 class Coder
 {
 private:
-    QString buffer;
+    QString endCode;
     char prev;
     bool leftPrev;
     short prevSize;
-    QMap<QChar, QString> dictionary;
+    int len{};
+    QMap<char, QString> dictionary;
 
 public:
     Coder():leftPrev(false), prevSize(0) {}
     bool hasPrev();
     char getPrev();
-    void setDictionary(QMap<QChar, QString>& dict);
-    string encode(QChar sb);
-    string getNextCodeBuffer(QString source);
+    void setDictionary(QMap<char, QString>& dict);
+    QMap<char, QString> getDictionary();
+    void setEndCode(QString code);
+    QString getEndCode();
+    QByteArray getEof();
+    QByteArray encode(char sb);
+    QByteArray getNextCodeBuffer(QByteArray source);
+    void clear();
+
+    static char formByte(QString code);
+    static QByteArray formBytes(QString code);
 };
 
 #endif // CODER_H

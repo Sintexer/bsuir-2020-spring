@@ -1,30 +1,32 @@
 #include "treeformer.h"
 
-TreeFormer::TreeFormer(QMap<QChar, int> cat){
-    for(QChar a: cat.keys()){
-        Node<int, QChar> *temp = new Node<int, QChar>(cat[a], a);
+TreeFormer::TreeFormer(QMap<char, int> cat){
+    for(char a: cat.keys()){
+        Node<int, char> *temp = new Node<int, char>(cat[a], a);
         nodes.push(temp);
     }
 }
-void TreeFormer::add(Node<int, QChar>* nw){
+void TreeFormer::add(Node<int, char>* nw){
     nodes.push(nw);
 }
 
-Node<int, QChar>* TreeFormer::take(){
-    Node<int, QChar>* temp = nodes.top();
+Node<int, char>* TreeFormer::take(){
+    Node<int, char>* temp = nodes.top();
     nodes.pop();
     return temp;
 }
 
-Node<int, QChar>* TreeFormer::formBTree(){
-    Node<int, QChar>* tree;
+Node<int, char>* TreeFormer::formBTree(){
+    Node<int, char>* tree;
     if(nodes.empty())
         tree = nullptr;
-    Node<int, QChar>* left, *right;
+    Node<int, char>* left, *right;
+    Node<int, char> *temp = new Node<int, char>(0);
+    nodes.push(temp);
     while(nodes.size()>1){
          left = take();
          right = take();
-         Node<int, QChar>* temp = new Node<int, QChar>(left, right);
+         Node<int, char>* temp = new Node<int, char>(left, right);
          nodes.push(temp);
     }
     tree = take();

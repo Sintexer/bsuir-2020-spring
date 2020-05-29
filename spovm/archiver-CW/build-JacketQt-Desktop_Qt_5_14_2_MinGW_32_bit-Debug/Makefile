@@ -251,7 +251,8 @@ Makefile: ../JacketQt/JacketQt.pro D:/Program/QT/5.14.2/mingw73_32/mkspecs/win32
 		D:/Program/QT/5.14.2/mingw73_32/lib/Qt5Gui.prl \
 		D:/Program/QT/5.14.2/mingw73_32/lib/Qt5Core.prl \
 		D:/Program/QT/5.14.2/mingw73_32/lib/qtmain.prl \
-		D:/Program/QT/5.14.2/mingw73_32/mkspecs/features/build_pass.prf
+		D:/Program/QT/5.14.2/mingw73_32/mkspecs/features/build_pass.prf \
+		../JacketQt/qrc.qrc
 	$(QMAKE) -o Makefile ..\JacketQt\JacketQt.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/Program/QT/5.14.2/mingw73_32/mkspecs/features/spec_pre.prf:
 D:/Program/QT/5.14.2/mingw73_32/mkspecs/qdevice.pri:
@@ -435,6 +436,7 @@ D:/Program/QT/5.14.2/mingw73_32/lib/Qt5Gui.prl:
 D:/Program/QT/5.14.2/mingw73_32/lib/Qt5Core.prl:
 D:/Program/QT/5.14.2/mingw73_32/lib/qtmain.prl:
 D:/Program/QT/5.14.2/mingw73_32/mkspecs/features/build_pass.prf:
+../JacketQt/qrc.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\JacketQt\JacketQt.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

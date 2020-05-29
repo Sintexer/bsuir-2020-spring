@@ -17,14 +17,15 @@ public:
     N value{};                                                                  //Значение узла
 
     Node<T, N>* left{}, *right{};							//Ссылки налево и направо
-
+    bool endNode{false};
     Node() = default;
+    Node(T cnt): count(cnt), left(nullptr), right(nullptr), has_value(false), endNode(true) {}
     Node(T cnt, N val): count(cnt), value(val), left(nullptr), right(nullptr), has_value(true) {}
     Node(Node<T, N>* lef, Node<T, N>* rgt) : left(lef), right(rgt), has_value(false) {
         count = left->count+right->count;
     }
     ~Node() {
-        qDebug() << "Deleting";
+        //qDebug() << "Deleting";
         if(left)
             delete left;
         if(right)
@@ -61,6 +62,14 @@ public:
 
     bool operator!=(Node<T, N> other){
         return !count==other.getCount();
+    }
+
+    void setEndNode(bool t){
+        endNode = t;
+    }
+
+    bool isEndNode(){
+        return endNode;
     }
 };
 

@@ -6,7 +6,7 @@
 struct NodeComparator
 {
 public:
-    bool operator()(Node<int, QChar>* first, Node<int, QChar>* second){
+    bool operator()(Node<int, char>* first, Node<int, char>* second){
         return first->getCount()>second->getCount();
     }
 };

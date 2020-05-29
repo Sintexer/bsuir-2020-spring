@@ -15,6 +15,7 @@
 #include <locale>
 #include <iomanip>
 #include <sstream>
+#include <fstream>
 
 
 using std::cout;
@@ -29,5 +30,8 @@ using std::map;
 using std::priority_queue;
 using std::cout;
 using std::pair;
+using std::ifstream;
+using std::ofstream;
+using std::ios;
 
 #endif // PCH_H

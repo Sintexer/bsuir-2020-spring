@@ -1,4 +1,4 @@
-QT       += core gui
+QT += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,26 +16,42 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    archivationthread.cpp \
     btree.cpp \
     catalog.cpp \
     coder.cpp \
-    filewriter.cpp \
+    dearchivationthread.cpp \
+    dialogwindow.cpp \
+    filecollector.cpp \
+    filedecoder.cpp \
+    fileentry.cpp \
+    filetranslator.cpp \
     main.cpp \
     mainwindow.cpp \
     node.cpp \
     nodecomparator.cpp \
-    treeformer.cpp
+    readbuffer.cpp \
+    treeformer.cpp \
+    waitbox.cpp
 
 HEADERS += \
+    archivationthread.h \
     btree.h \
     catalog.h \
     coder.h \
-    filewriter.h \
+    dearchivationthread.h \
+    dialogwindow.h \
+    filecollector.h \
+    filedecoder.h \
+    fileentry.h \
+    filetranslator.h \
     mainwindow.h \
     node.h \
     nodecomparator.h \
     pch.h \
-    treeformer.h
+    readbuffer.h \
+    treeformer.h \
+    waitbox.h
 
 FORMS += \
     mainwindow.ui
@@ -44,3 +60,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    qrc.qrc
