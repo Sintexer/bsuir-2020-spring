@@ -3,6 +3,9 @@ package com.ilyabuglakov.triangleanalyzer.model;
 public class TriangleAttributes {
     Triangle triangle;
     public boolean equilateral, isosceles, rectangular;
+
+    public TriangleAttributes() {}
+
     public TriangleAttributes(Triangle triangle, boolean equilateral, boolean isosceles, boolean rectangular){
         this.triangle = triangle;
         this.equilateral = equilateral;

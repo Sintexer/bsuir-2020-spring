@@ -4,18 +4,19 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.ilyabuglakov.triangleanalyzer.application.exceptions.IllegalArgumentException;
 import com.ilyabuglakov.triangleanalyzer.application.exceptions.InternalServerErrorException;
+import com.ilyabuglakov.triangleanalyzer.entity.TriangleEntity;
 import com.ilyabuglakov.triangleanalyzer.model.*;
-import com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.TriangleAnalyzerService;
+import com.ilyabuglakov.triangleanalyzer.repository.TriangleAttributesRepository;
+import com.ilyabuglakov.triangleanalyzer.repository.TriangleRepository;
+import com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService;
+import com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerSqlService;
+import com.ilyabuglakov.triangleanalyzer.service.converter.TriangleConverter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.io.IOException;
@@ -28,6 +29,11 @@ public class TriangleAnalyzerController{
 
     @Autowired
     TriangleAnalyzerService service;
+    @Autowired
+    TriangleAnalyzerSqlService sqlService;
+    @Autowired
+    TriangleAttributesRepository triangleAttributesRepository;
+
 
     @RequestMapping("/triangle-analyzer")
     public  ResponseEntity<?> analyzeTriangle(@RequestParam(value = "side1", required = true) int sd1,
@@ -57,5 +63,14 @@ public class TriangleAnalyzerController{
         return  ResponseEntity.ok(service.formResponse(triangles.getTriangles()));
     }
 
+    @PostMapping(value = "/triangle-analyzer-sql", consumes = "application/json")
+    public ResponseEntity<?> triangleAnalyzerSql(@RequestBody AnalyzerRequestDto triangles){
+        return ResponseEntity.ok(sqlService.formResponse(triangles.getTriangles()));
+    }
+
+    @GetMapping(value = "/triangle-analyzer-sql/{processId}")
+    public ResponseEntity<?> triangleAnalyzerSqlGet(@PathVariable Long processId){
+        return sqlService.formResponse(processId);
+    }
 }
 

@@ -1,6 +1,6 @@
 package com.ilyabuglakov.triangleanalyzer.service;
 
-import com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.TriangleAnalyzerService;
+import com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

@@ -1,6 +1,6 @@
 package com.ilyabuglakov.triangleanalyzer.config;
 
-import com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService.TriangleAnalyzerService;
+import com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService;
 import org.mockito.Mockito;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

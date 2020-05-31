@@ -46,4 +46,6 @@ public class AnalyzerResponseDto {
         this.invalidRequestCount = invalidRequestCount;
         this.responseList = responseList;
     }
+
+    public AnalyzerResponseDto(){}
 }

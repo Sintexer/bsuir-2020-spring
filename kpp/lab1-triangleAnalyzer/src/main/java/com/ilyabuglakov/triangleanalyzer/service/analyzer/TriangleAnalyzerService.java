@@ -1,4 +1,4 @@
-package com.ilyabuglakov.triangleanalyzer.service.TriangleAnalyzerService;
+package com.ilyabuglakov.triangleanalyzer.service.analyzer;
 
 import com.ilyabuglakov.triangleanalyzer.controller.TriangleAnalyzerController;
 import com.ilyabuglakov.triangleanalyzer.model.AnalyzerResponseDto;
@@ -38,21 +38,20 @@ public class TriangleAnalyzerService {
 
     public AnalyzerResponseDto formResponse(List<Triangle> triangles){
         counter.increment();
-        final long total = triangles.stream().count(),
+        final long total = triangles.size(),
                 unique = triangles.stream().distinct().count();
-        List<Triangle> validList = triangles.stream().distinct().filter(t -> Validator.softValidate(t)).collect(Collectors.toList());
+        List<Triangle> validList = triangles.stream().distinct().filter(Validator::softValidate).collect(Collectors.toList());
         return new AnalyzerResponseDto(
-                total, unique, unique - validList.stream().count(),
-                validList.stream().filter(t -> Validator.softValidate(t)).map(t ->{
+                total, unique, unique - (long) validList.size(),
+                validList.stream().filter(Validator::softValidate).map(t ->{
                     return formResponse(t.getSide1(), t.getSide2(), t.getSide3());
                 }).collect(Collectors.toList()));
     }
 
     private TriangleAttributes useCache(int sd1, int sd2, int sd3){
-        TriangleAttributes response = cacher.contains(sd1,sd2,sd3) ?
+        return cacher.contains(sd1,sd2,sd3) ?
                 cacher.get(sd1,sd2,sd3):
                 cacher.put(sd1, sd2, sd3, getAnalysis(sd1, sd2, sd3));
-        return response;
     }
 
     public TriangleAttributes getAnalysis(int sd1, int sd2, int sd3){

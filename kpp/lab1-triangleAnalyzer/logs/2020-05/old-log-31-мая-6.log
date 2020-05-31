@@ -1,0 +1,33 @@
+2020-05-31 18:32:55,401 [ERROR] com.ilyabuglakov.triangleanalyzer.service.Validator [http-nio-8080-exec-3]
+Provided sides can't form a triangle: side1=3, side2=4, side3=0
+
+2020-05-31 18:32:55,404 [INFO] com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=12, side2=13, side3=14
+
+2020-05-31 18:32:55,406 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Cached new element with key=12-13-14
+
+2020-05-31 18:32:55,407 [INFO] com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=3, side2=5, side3=5
+
+2020-05-31 18:32:55,408 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Cached new element with key=3-5-5
+
+2020-05-31 18:32:55,409 [INFO] com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=4, side2=4, side3=5
+
+2020-05-31 18:32:55,410 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Cached new element with key=4-4-5
+
+2020-05-31 18:32:55,411 [INFO] com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=3, side2=4, side3=5
+
+2020-05-31 18:32:55,412 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Cached new element with key=3-4-5
+
+2020-05-31 18:32:55,413 [INFO] com.ilyabuglakov.triangleanalyzer.service.analyzer.TriangleAnalyzerService [http-nio-8080-exec-3]
+Normal work. Provided sides: side1=4, side2=5, side3=4
+
+2020-05-31 18:32:55,414 [INFO] com.ilyabuglakov.triangleanalyzer.service.TriangleCacher [http-nio-8080-exec-3]
+Cached new element with key=4-5-4
+
