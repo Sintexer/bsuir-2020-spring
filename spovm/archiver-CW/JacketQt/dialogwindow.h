@@ -11,19 +11,20 @@
 class DialogWindow : public QDialog
 {
     Q_OBJECT
-public:
-    DialogWindow(QWidget* parent = nullptr);
 private:
     QLabel* message;
     QLineEdit* input;
     QPushButton* ok;
     QPushButton* cancel;
+public:
+    DialogWindow(QWidget* parent = nullptr);
+signals:
+    void fileNameEntered(QString str);
 private slots:
     void on_text_changed(QString str);
     void on_ok_button_clicked();
     void on_cancel_button_clicked();
-signals:
-    void fileNameEntered(QString str);
+
 };
 
 #endif // DIALOGWINDOW_H

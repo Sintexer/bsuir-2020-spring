@@ -1,4 +1,4 @@
-    #ifndef CODER_H
+#ifndef CODER_H
 #define CODER_H
 
 #include "pch.h"

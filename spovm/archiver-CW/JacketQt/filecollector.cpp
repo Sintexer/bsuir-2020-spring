@@ -64,7 +64,7 @@ bool FileCollector::isCorrectFileName(QString path){
     if (path[1]==':' && (path[0]>='A' && path[0]<='Z'))
         path = path.right(path.length()-2);
 
-    QString illegal="<>:\"|?*";
+    QString illegal="\\/<>:\"|?*";
 
     foreach (const QChar& c, path)
     {

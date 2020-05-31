@@ -7,7 +7,8 @@ void FileTranslator::openFile(QString path_){
     if(fout.isOpen())
         fout.close();
     fout.setFileName(path_);
-    fout.open(QFile::WriteOnly);
+    if(!fout.open(QFile::WriteOnly))
+        throw std::runtime_error("Cant open output file");
 }
 
 void FileTranslator::translateFiles(){
@@ -15,7 +16,7 @@ void FileTranslator::translateFiles(){
     QByteArray buf{};
 
     if(allFiles.isEmpty())
-        throw std::runtime_error("FileTranslator::translateFiles():allFiles is empty");
+        throw std::runtime_error("Internal error");
 
     buf.clear();
     buf.append(allFiles.front().getPath());
@@ -61,7 +62,6 @@ void FileTranslator::translateFiles(){
             buf.append("0|");
             fout.write(buf);
             buf.clear();
-            qDebug() << "File is empty";
             continue;
         }
 
@@ -87,6 +87,7 @@ void FileTranslator::translateFiles(){
         }while(!buf.isNull());
         fout.write(coder.getEof());
         fout.flush();
+        inf.close();
     }
     fout.close();
 }

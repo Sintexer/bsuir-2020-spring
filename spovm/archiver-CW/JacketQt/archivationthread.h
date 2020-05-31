@@ -3,7 +3,6 @@
 
 #include <QThread>
 #include <QFileInfo>
-#include <QMessageBox>
 
 #include "filetranslator.h"
 #include "filecollector.h"
@@ -11,15 +10,16 @@
 
 class ArchivationThread : public QThread
 { 
+    Q_OBJECT
 private:
     QString fileName;
     QFileInfo *activeFile{nullptr};
     QList<FileEntry> fcList;
     FileTranslator ft;
-
+signals:
+    void exception_executed(QString e);
 public:
-    ArchivationThread(){}
-    ArchivationThread(QString fileName_, QFileInfo* activeFile_): fileName(fileName_), activeFile(activeFile_) {}
+    ArchivationThread() = default;
 
     void setFileName(QString fileName_){
         fileName=fileName_;

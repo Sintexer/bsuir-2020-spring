@@ -16,6 +16,8 @@ debug/readbuffer.o
 debug/treeformer.o
 debug/waitbox.o
 debug/qrc_qrc.o
+debug/moc_archivationthread.o
+debug/moc_dearchivationthread.o
 debug/moc_dialogwindow.o
 debug/moc_mainwindow.o
 debug/moc_waitbox.o

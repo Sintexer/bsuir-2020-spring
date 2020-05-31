@@ -9,9 +9,9 @@ WaitBox::WaitBox(QWidget *parent)
     mainLayout->addWidget(msgLabel);
     mainLayout->addWidget(cancel);
     setLayout(mainLayout);
-    setWindowFlags(Qt::Window
-        | Qt::WindowTitleHint);
-
+    setWindowFlags(Qt::Dialog
+        | Qt::WindowTitleHint
+        | Qt::MSWindowsFixedSizeDialogHint);
     QObject::connect(cancel, &QPushButton::clicked, this, &WaitBox::on_cancel_button_clicked);
 }
 void WaitBox::show(){

@@ -6,6 +6,7 @@
 
 #include <QThread>
 #include <QDir>
+#include <QMessageBox>
 
 class FileDecoder
 {

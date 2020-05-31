@@ -16,6 +16,8 @@ release/readbuffer.o
 release/treeformer.o
 release/waitbox.o
 release/qrc_qrc.o
+release/moc_archivationthread.o
+release/moc_dearchivationthread.o
 release/moc_dialogwindow.o
 release/moc_mainwindow.o
 release/moc_waitbox.o

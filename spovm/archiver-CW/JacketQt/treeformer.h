@@ -10,7 +10,7 @@ class TreeFormer
 private:
     priority_queue<Node<int, char>*, vector<Node<int, char>*>, NodeComparator> nodes;
 public:
-    TreeFormer() {};
+    TreeFormer() = default;
     TreeFormer(QMap<char, int> cat);
 
     void add(Node<int, char>* nw);

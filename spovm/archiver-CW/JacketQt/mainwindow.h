@@ -15,10 +15,6 @@
 #include <QMessageBox>
 #include <QMainWindow>
 #include <QFileInfo>
-#include <QAbstractItemModel>
-#include <QDesktopWidget>
-
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -54,16 +50,18 @@ private slots:
 
     void on_deleteButton_clicked();
 
+    void when_thread_exception_handled(QString e);
+
 private:
     Ui::MainWindow *ui;
     QFileInfo *activeFile;
+    QFileSystemModel *model;
     DialogWindow *dw;
     WaitBox *archiveWait;
     WaitBox *dearchiveWait;
     ArchivationThread *at;
     DearchivationThread *dt;
     QString fileName;
-    QFileSystemModel *model;
     const int MAX_DEPTH = 50;
     bool processing;
 };

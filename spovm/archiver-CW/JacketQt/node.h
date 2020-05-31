@@ -5,19 +5,15 @@
 
 template <typename T, typename N>
 class Node {
-    /*Класс узла, в котором хранится значение шаблонного типа и число,
-    а также два указателя, налево и направо
-    слева храннится елемент, который меньше элемента в узле
-    справа наоборот*/
 private:
     bool has_value{true};
 public:
     QString code;
     T count{};
-    N value{};                                                                  //Значение узла
-
-    Node<T, N>* left{}, *right{};							//Ссылки налево и направо
+    N value{};
+    Node<T, N>* left{nullptr}, *right{nullptr};
     bool endNode{false};
+
     Node() = default;
     Node(T cnt): count(cnt), left(nullptr), right(nullptr), has_value(false), endNode(true) {}
     Node(T cnt, N val): count(cnt), value(val), left(nullptr), right(nullptr), has_value(true) {}
@@ -25,7 +21,6 @@ public:
         count = left->count+right->count;
     }
     ~Node() {
-        //qDebug() << "Deleting";
         if(left)
             delete left;
         if(right)
@@ -48,6 +43,15 @@ public:
         return has_value;
     }
 
+
+    void setEndNode(bool t){
+        endNode = t;
+    }
+
+    bool isEndNode(){
+        return endNode;
+    }
+
     bool operator>(Node<T, N> other){
         return count>other.getCount();
     }
@@ -63,14 +67,8 @@ public:
     bool operator!=(Node<T, N> other){
         return !count==other.getCount();
     }
-
-    void setEndNode(bool t){
-        endNode = t;
-    }
-
-    bool isEndNode(){
-        return endNode;
-    }
 };
+
+
 
 #endif // NODE_H

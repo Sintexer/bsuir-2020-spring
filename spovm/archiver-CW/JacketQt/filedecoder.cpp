@@ -21,7 +21,7 @@ void FileDecoder::dearchive(QString path, QString fileName){
         }
         QFile outf(currentName);
         if(!outf.open(QFile::WriteOnly)){
-            throw std::runtime_error("FileDecodder::dearchive(): Cant create file");
+            throw std::runtime_error("Can't dearchive");
         }
         if(decodeDictionary())
             decodeFile(outf);
@@ -35,7 +35,7 @@ bool FileDecoder::decodeDictionary(){
 
     size = getNum();
     if(!size){
-        return false;                       //if empty file
+        return false;
     }
     do{
         char bt = input.get();
@@ -75,7 +75,7 @@ int FileDecoder::getNum(){
         num.append(input.get());
     }
     if(num.isNull())
-        throw std::runtime_error("DileDecoder::getNum(): Cant get num, archive is corrupted");
+        throw std::runtime_error("Archive was corrupted");
     input.get();
     return num.toInt();
 }
@@ -127,7 +127,7 @@ void FileDecoder::decodeFile(QFile& outf){
                 code.append("0");
 
             if(code.length()>longestCodeSize)
-                throw std::runtime_error("FileDecoder::decodeFile(): archive was corrupted");
+                throw std::runtime_error("Archive was corrupted");
 
             byte<<=1;
             --size;

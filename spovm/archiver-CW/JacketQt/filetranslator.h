@@ -14,12 +14,10 @@ private:
     QFile fout;
     QFile fin;
     QList<FileEntry> allFiles;
-    Coder coder;
+    Coder coder{};
 public:
-    FileTranslator() {};
+    FileTranslator() = default;
     FileTranslator(QString path): fout(path){
-        if(fout.isOpen())
-            fout.close();
         fout.open(QFile::WriteOnly);
     }
 
@@ -27,6 +25,7 @@ public:
         fout.close();
         fin.close();
     }
+
     void openFile(QString path_);
     void setAllFiles(QList<FileEntry> allFiles_);
     QList<FileEntry> getAllFiles();

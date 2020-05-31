@@ -2,7 +2,7 @@
 
 void ArchivationThread::run(){
     if(fileName.isNull() || !activeFile)
-        throw std::runtime_error("ArchvationThread: fileName or activeFile is empty");
+        emit exception_executed("ArchvationThread: fileName or activeFile is empty");
     try{
         ft.openFile(fileName);
         QList<FileEntry> fcList;
@@ -23,8 +23,7 @@ void ArchivationThread::run(){
         ft.setAllFiles(fcList);
         ft.translateFiles();
     }
-    catch(exception e){
-        QMessageBox::critical(nullptr, "Error", e.what());
-        return;
+    catch(runtime_error e){
+        emit exception_executed(e.what());
     }
 }

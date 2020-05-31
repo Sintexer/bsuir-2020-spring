@@ -1,4 +1,4 @@
-#ifndef CATALOG_H
+    #ifndef CATALOG_H
 #define CATALOG_H
 
 #include "pch.h"
@@ -8,7 +8,7 @@ class Catalog
 private:
     QMap<char, int> catalog;
 public:
-    Catalog(){}
+    Catalog() = default;
     Catalog(QByteArray info);
 
     QMap<char, int>& add(QByteArray info);

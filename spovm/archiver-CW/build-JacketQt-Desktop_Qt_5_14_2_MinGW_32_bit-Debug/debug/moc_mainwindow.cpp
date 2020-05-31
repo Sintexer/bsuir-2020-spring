@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[15];
-    char stringdata0[273];
+    QByteArrayData data[17];
+    char stringdata0[305];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,7 +46,9 @@ QT_MOC_LITERAL(10, 141, 25), // "when_archivation_complete"
 QT_MOC_LITERAL(11, 167, 25), // "when_archivation_canceled"
 QT_MOC_LITERAL(12, 193, 27), // "when_dearchivation_complete"
 QT_MOC_LITERAL(13, 221, 27), // "when_dearchivation_canceled"
-QT_MOC_LITERAL(14, 249, 23) // "on_deleteButton_clicked"
+QT_MOC_LITERAL(14, 249, 23), // "on_deleteButton_clicked"
+QT_MOC_LITERAL(15, 273, 29), // "when_thread_exception_handled"
+QT_MOC_LITERAL(16, 303, 1) // "e"
 
     },
     "MainWindow\0close_waitBox\0\0on_treeView_clicked\0"
@@ -57,7 +59,8 @@ QT_MOC_LITERAL(14, 249, 23) // "on_deleteButton_clicked"
     "when_archivation_canceled\0"
     "when_dearchivation_complete\0"
     "when_dearchivation_canceled\0"
-    "on_deleteButton_clicked"
+    "on_deleteButton_clicked\0"
+    "when_thread_exception_handled\0e"
 };
 #undef QT_MOC_LITERAL
 
@@ -67,7 +70,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -75,18 +78,19 @@ static const uint qt_meta_data_MainWindow[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   64,    2, 0x06 /* Public */,
+       1,    0,   69,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    1,   65,    2, 0x08 /* Private */,
-       6,    0,   68,    2, 0x08 /* Private */,
-       7,    0,   69,    2, 0x08 /* Private */,
-       8,    1,   70,    2, 0x08 /* Private */,
-      10,    0,   73,    2, 0x08 /* Private */,
-      11,    0,   74,    2, 0x08 /* Private */,
-      12,    0,   75,    2, 0x08 /* Private */,
-      13,    0,   76,    2, 0x08 /* Private */,
-      14,    0,   77,    2, 0x08 /* Private */,
+       3,    1,   70,    2, 0x08 /* Private */,
+       6,    0,   73,    2, 0x08 /* Private */,
+       7,    0,   74,    2, 0x08 /* Private */,
+       8,    1,   75,    2, 0x08 /* Private */,
+      10,    0,   78,    2, 0x08 /* Private */,
+      11,    0,   79,    2, 0x08 /* Private */,
+      12,    0,   80,    2, 0x08 /* Private */,
+      13,    0,   81,    2, 0x08 /* Private */,
+      14,    0,   82,    2, 0x08 /* Private */,
+      15,    1,   83,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -101,6 +105,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   16,
 
        0        // eod
 };
@@ -121,6 +126,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 7: _t->when_dearchivation_complete(); break;
         case 8: _t->when_dearchivation_canceled(); break;
         case 9: _t->on_deleteButton_clicked(); break;
+        case 10: _t->when_thread_exception_handled((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -164,13 +170,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }

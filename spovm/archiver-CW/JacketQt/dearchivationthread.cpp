@@ -5,8 +5,7 @@ void DearchivationThread::run(){
         FileDecoder fd;
         fd.dearchive(filePath, fileName);
     }
-    catch(std::exception e){
-        QMessageBox::critical(nullptr, "Error", "Archive corrupted");
-        return;
+    catch(std::runtime_error e){
+        emit exception_executed(e.what());
     }
 }

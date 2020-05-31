@@ -67,6 +67,8 @@ SOURCES       = ..\JacketQt\archivationthread.cpp \
 		..\JacketQt\readbuffer.cpp \
 		..\JacketQt\treeformer.cpp \
 		..\JacketQt\waitbox.cpp debug\qrc_qrc.cpp \
+		debug\moc_archivationthread.cpp \
+		debug\moc_dearchivationthread.cpp \
 		debug\moc_dialogwindow.cpp \
 		debug\moc_mainwindow.cpp \
 		debug\moc_waitbox.cpp
@@ -88,6 +90,8 @@ OBJECTS       = debug/archivationthread.o \
 		debug/treeformer.o \
 		debug/waitbox.o \
 		debug/qrc_qrc.o \
+		debug/moc_archivationthread.o \
+		debug/moc_dearchivationthread.o \
 		debug/moc_dialogwindow.o \
 		debug/moc_mainwindow.o \
 		debug/moc_waitbox.o
@@ -147,7 +151,7 @@ dist:
 	$(ZIP) JacketQt.zip $(SOURCES) $(DIST) ..\JacketQt\JacketQt.pro D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\spec_pre.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\qdevice.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\device_config.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\common\sanitize.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\common\gcc-base.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\common\g++-base.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\common\angle.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\win32\windows_vulkan_sdk.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\common\windows-vulkan.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\common\g++-win32.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\common\windows-desktop.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\qconfig.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3danimation.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3danimation_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dcore.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dcore_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dextras.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dextras_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dinput.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dinput_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dlogic.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquick.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquick_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickextras.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickinput.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickrender.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3drender.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3drender_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axbase.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axbase_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axcontainer.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axserver.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axserver_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_bluetooth.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_bootstrap_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_concurrent.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_concurrent_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_core.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_core_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_dbus.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_dbus_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_designer.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_designer_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_edid_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_egl_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_fb_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gamepad.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gamepad_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gui.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gui_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_help.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_help_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_location.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_location_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimedia.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimedia_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_network.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_network_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_nfc.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_nfc_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_opengl.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_opengl_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_openglextensions.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_openglextensions_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioning.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioning_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioningquick.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioningquick_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_printsupport.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_printsupport_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qml.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qml_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlmodels.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmltest.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmltest_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickshapes_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickwidgets.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_remoteobjects.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_repparser.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_repparser_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_scxml.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_scxml_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sensors.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sensors_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialbus.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialbus_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialport.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialport_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sql.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sql_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_svg.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_svg_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_testlib.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_testlib_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_texttospeech.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_theme_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_uiplugin.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_uitools.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_uitools_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_webchannel.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_webchannel_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_websockets.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_websockets_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_widgets.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_widgets_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_winextras.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_winextras_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xml.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xml_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\modules\qt_lib_zlib_private.pri D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\qt_functions.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\qt_config.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\win32-g++\qmake.conf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\spec_post.prf .qmake.stash D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\exclusive_builds.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\toolchain.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\default_pre.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\win32\default_pre.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\resolve_config.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\exclusive_builds_post.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\default_post.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\build_pass.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\qml_debug.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\precompile_header.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\warn_on.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\qt.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\resources_functions.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\resources.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\moc.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\win32\opengl.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\uic.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\qmake_use.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\file_copies.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\win32\windows.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\testcase_targets.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\exceptions.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\yacc.prf D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\lex.prf ..\JacketQt\JacketQt.pro ..\JacketQt\qrc.qrc D:\Program\QT\5.14.2\mingw73_32\lib\Qt5Widgets.prl D:\Program\QT\5.14.2\mingw73_32\lib\Qt5Gui.prl D:\Program\QT\5.14.2\mingw73_32\lib\Qt5Core.prl D:\Program\QT\5.14.2\mingw73_32\lib\qtmain.prl   ..\JacketQt\qrc.qrc D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\data\dummy.cpp ..\JacketQt\archivationthread.h ..\JacketQt\btree.h ..\JacketQt\catalog.h ..\JacketQt\coder.h ..\JacketQt\dearchivationthread.h ..\JacketQt\dialogwindow.h ..\JacketQt\filecollector.h ..\JacketQt\filedecoder.h ..\JacketQt\fileentry.h ..\JacketQt\filetranslator.h ..\JacketQt\mainwindow.h ..\JacketQt\node.h ..\JacketQt\nodecomparator.h ..\JacketQt\pch.h ..\JacketQt\readbuffer.h ..\JacketQt\treeformer.h ..\JacketQt\waitbox.h  ..\JacketQt\archivationthread.cpp ..\JacketQt\btree.cpp ..\JacketQt\catalog.cpp ..\JacketQt\coder.cpp ..\JacketQt\dearchivationthread.cpp ..\JacketQt\dialogwindow.cpp ..\JacketQt\filecollector.cpp ..\JacketQt\filedecoder.cpp ..\JacketQt\fileentry.cpp ..\JacketQt\filetranslator.cpp ..\JacketQt\main.cpp ..\JacketQt\mainwindow.cpp ..\JacketQt\node.cpp ..\JacketQt\nodecomparator.cpp ..\JacketQt\readbuffer.cpp ..\JacketQt\treeformer.cpp ..\JacketQt\waitbox.cpp ..\JacketQt\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\archivationthread.o debug\btree.o debug\catalog.o debug\coder.o debug\dearchivationthread.o debug\dialogwindow.o debug\filecollector.o debug\filedecoder.o debug\fileentry.o debug\filetranslator.o debug\main.o debug\mainwindow.o debug\node.o debug\nodecomparator.o debug\readbuffer.o debug\treeformer.o debug\waitbox.o debug\qrc_qrc.o debug\moc_dialogwindow.o debug\moc_mainwindow.o debug\moc_waitbox.o
+	-$(DEL_FILE) debug\archivationthread.o debug\btree.o debug\catalog.o debug\coder.o debug\dearchivationthread.o debug\dialogwindow.o debug\filecollector.o debug\filedecoder.o debug\fileentry.o debug\filetranslator.o debug\main.o debug\mainwindow.o debug\node.o debug\nodecomparator.o debug\readbuffer.o debug\treeformer.o debug\waitbox.o debug\qrc_qrc.o debug\moc_archivationthread.o debug\moc_dearchivationthread.o debug\moc_dialogwindow.o debug\moc_mainwindow.o debug\moc_waitbox.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -178,9 +182,259 @@ compiler_moc_predefs_clean:
 debug/moc_predefs.h: D:/Program/QT/5.14.2/mingw73_32/mkspecs/features/data/dummy.cpp
 	g++ -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -dM -E -o debug\moc_predefs.h D:\Program\QT\5.14.2\mingw73_32\mkspecs\features\data\dummy.cpp
 
-compiler_moc_header_make_all: debug/moc_dialogwindow.cpp debug/moc_mainwindow.cpp debug/moc_waitbox.cpp
+compiler_moc_header_make_all: debug/moc_archivationthread.cpp debug/moc_dearchivationthread.cpp debug/moc_dialogwindow.cpp debug/moc_mainwindow.cpp debug/moc_waitbox.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_dialogwindow.cpp debug\moc_mainwindow.cpp debug\moc_waitbox.cpp
+	-$(DEL_FILE) debug\moc_archivationthread.cpp debug\moc_dearchivationthread.cpp debug\moc_dialogwindow.cpp debug\moc_mainwindow.cpp debug\moc_waitbox.cpp
+debug/moc_archivationthread.cpp: ../JacketQt/archivationthread.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QThread \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qthread.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobject.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobjectdefs.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qnamespace.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qconfig.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qtcore-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsystemdetection.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qprocessordetection.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcompilerdetection.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qtypeinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsysinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qlogging.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qflags.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qbasicatomic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic_bootstrap.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qgenericatomic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic_cxx11.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic_msvc.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qglobalstatic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmutex.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qnumeric.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qversiontagging.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstring.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qchar.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qbytearray.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qrefcount.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qarraydata.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringliteral.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringalgorithms.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringview.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringbuilder.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qlist.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qalgorithms.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qiterator.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qhashfunctions.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qpair.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qvector.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcontainertools_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qpoint.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qbytearraylist.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringlist.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qregexp.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringmatcher.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcoreevent.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qscopedpointer.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmetatype.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QFileInfo \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfile.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfiledevice.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmargins.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsize.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qcolor.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qrgb.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qbrush.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qline.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtransform.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qimage.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfont.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qcursor.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qkeysequence.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qevent.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qset.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
+		../JacketQt/filetranslator.h \
+		../JacketQt/coder.h \
+		../JacketQt/pch.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QFile \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QString \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QMap \
+		../JacketQt/fileentry.h \
+		../JacketQt/filecollector.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDir \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdir.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		debug/moc_predefs.h \
+		D:/Program/QT/5.14.2/mingw73_32/bin/moc.exe
+	D:\Program\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Repositories/2020-spring/spovm/archiver-CW/build-JacketQt-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h -ID:/Program/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -ID:/Repositories/2020-spring/spovm/archiver-CW/JacketQt -ID:/Program/QT/5.14.2/mingw73_32/include -ID:/Program/QT/5.14.2/mingw73_32/include/QtWidgets -ID:/Program/QT/5.14.2/mingw73_32/include/QtGui -ID:/Program/QT/5.14.2/mingw73_32/include/QtANGLE -ID:/Program/QT/5.14.2/mingw73_32/include/QtCore -I. -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -ID:/Program/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\JacketQt\archivationthread.h -o debug\moc_archivationthread.cpp
+
+debug/moc_dearchivationthread.cpp: ../JacketQt/dearchivationthread.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QThread \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qthread.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobject.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobjectdefs.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qnamespace.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qconfig.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qtcore-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsystemdetection.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qprocessordetection.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcompilerdetection.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qtypeinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsysinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qlogging.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qflags.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qbasicatomic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic_bootstrap.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qgenericatomic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic_cxx11.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qatomic_msvc.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qglobalstatic.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmutex.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qnumeric.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qversiontagging.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstring.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qchar.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qbytearray.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qrefcount.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qarraydata.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringliteral.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringalgorithms.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringview.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringbuilder.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qlist.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qalgorithms.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qiterator.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qhashfunctions.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qpair.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qvector.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcontainertools_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qpoint.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qbytearraylist.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringlist.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qregexp.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qstringmatcher.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcoreevent.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qscopedpointer.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmetatype.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QString \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmargins.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsize.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qcolor.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qrgb.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qbrush.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qline.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtransform.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qimage.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfont.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qcursor.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qkeysequence.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qevent.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qset.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfile.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfiledevice.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
+		../JacketQt/filedecoder.h \
+		../JacketQt/pch.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QFile \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDebug \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QMap \
+		../JacketQt/readbuffer.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDir \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdir.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h \
+		debug/moc_predefs.h \
+		D:/Program/QT/5.14.2/mingw73_32/bin/moc.exe
+	D:\Program\QT\5.14.2\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Repositories/2020-spring/spovm/archiver-CW/build-JacketQt-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/debug/moc_predefs.h -ID:/Program/QT/5.14.2/mingw73_32/mkspecs/win32-g++ -ID:/Repositories/2020-spring/spovm/archiver-CW/JacketQt -ID:/Program/QT/5.14.2/mingw73_32/include -ID:/Program/QT/5.14.2/mingw73_32/include/QtWidgets -ID:/Program/QT/5.14.2/mingw73_32/include/QtGui -ID:/Program/QT/5.14.2/mingw73_32/include/QtANGLE -ID:/Program/QT/5.14.2/mingw73_32/include/QtCore -I. -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -ID:/Program/QT/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -ID:/Program/QT/Tools/mingw730_32/i686-w64-mingw32/include ..\JacketQt\dearchivationthread.h -o debug\moc_dearchivationthread.cpp
+
 debug/moc_dialogwindow.cpp: ../JacketQt/dialogwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
@@ -392,15 +646,13 @@ debug/moc_mainwindow.cpp: ../JacketQt/mainwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDir \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdir.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h \
-		../JacketQt/filecollector.h \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
-		../JacketQt/dialogwindow.h \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
@@ -434,6 +686,10 @@ debug/moc_mainwindow.cpp: ../JacketQt/mainwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
+		../JacketQt/filecollector.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../JacketQt/dialogwindow.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -457,8 +713,6 @@ debug/moc_mainwindow.cpp: ../JacketQt/mainwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QObject \
 		../JacketQt/archivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QFileInfo \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		../JacketQt/dearchivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QFileSystemModel \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qfilesystemmodel.h \
@@ -1247,14 +1501,14 @@ debug/dialogwindow.o: ../JacketQt/dialogwindow.cpp ../JacketQt/dialogwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDir \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdir.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		../JacketQt/filecollector.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
 		../JacketQt/waitbox.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QObject \
 		../JacketQt/archivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QFileInfo \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		../JacketQt/dearchivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QFileSystemModel \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qfilesystemmodel.h \
@@ -1439,7 +1693,47 @@ debug/filedecoder.o: ../JacketQt/filedecoder.cpp ../JacketQt/filedecoder.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDir \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdir.h \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qmargins.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpaintdevice.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qrect.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qsize.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpalette.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qcolor.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qrgb.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qrgba64.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qbrush.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qmatrix.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpolygon.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qregion.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdatastream.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qline.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtransform.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpainterpath.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qimage.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpixelformat.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qpixmap.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfont.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfontmetrics.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qfontinfo.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qsizepolicy.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qcursor.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qkeysequence.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qevent.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurl.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\filedecoder.o ..\JacketQt\filedecoder.cpp
 
 debug/fileentry.o: ../JacketQt/fileentry.cpp ../JacketQt/fileentry.h \
@@ -1642,15 +1936,13 @@ debug/main.o: ../JacketQt/main.cpp ../JacketQt/pch.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDir \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdir.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h \
-		../JacketQt/filecollector.h \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
-		../JacketQt/dialogwindow.h \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
@@ -1684,6 +1976,10 @@ debug/main.o: ../JacketQt/main.cpp ../JacketQt/pch.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
+		../JacketQt/filecollector.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../JacketQt/dialogwindow.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -1707,8 +2003,6 @@ debug/main.o: ../JacketQt/main.cpp ../JacketQt/pch.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QObject \
 		../JacketQt/archivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QFileInfo \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		../JacketQt/dearchivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QFileSystemModel \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qfilesystemmodel.h \
@@ -1825,15 +2119,13 @@ debug/mainwindow.o: ../JacketQt/mainwindow.cpp ../JacketQt/mainwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QDir \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qdir.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qfileinfo.h \
-		../JacketQt/filecollector.h \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
-		../JacketQt/dialogwindow.h \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgetsglobal.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtguiglobal.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtgui-config.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qtwidgets-config.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qdialog.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qwidget.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qwindowdefs_win.h \
@@ -1867,6 +2159,10 @@ debug/mainwindow.o: ../JacketQt/mainwindow.cpp ../JacketQt/mainwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/qurlquery.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qvector2d.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtGui/qtouchdevice.h \
+		../JacketQt/filecollector.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QList \
+		../JacketQt/dialogwindow.h \
+		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QDialog \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QLabel \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qlabel.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qframe.h \
@@ -1890,8 +2186,6 @@ debug/mainwindow.o: ../JacketQt/mainwindow.cpp ../JacketQt/mainwindow.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QObject \
 		../JacketQt/archivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtCore/QFileInfo \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QMessageBox \
-		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qmessagebox.h \
 		../JacketQt/dearchivationthread.h \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/QFileSystemModel \
 		D:/Program/QT/5.14.2/mingw73_32/include/QtWidgets/qfilesystemmodel.h \
@@ -2348,6 +2642,12 @@ debug/waitbox.o: ../JacketQt/waitbox.cpp ../JacketQt/waitbox.h \
 
 debug/qrc_qrc.o: debug/qrc_qrc.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\qrc_qrc.o debug\qrc_qrc.cpp
+
+debug/moc_archivationthread.o: debug/moc_archivationthread.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_archivationthread.o debug\moc_archivationthread.cpp
+
+debug/moc_dearchivationthread.o: debug/moc_dearchivationthread.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_dearchivationthread.o debug\moc_dearchivationthread.cpp
 
 debug/moc_dialogwindow.o: debug/moc_dialogwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_dialogwindow.o debug\moc_dialogwindow.cpp

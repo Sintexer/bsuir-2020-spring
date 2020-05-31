@@ -19,8 +19,10 @@ MainWindow::MainWindow(QWidget *parent)
     dw = new DialogWindow(this);
     archiveWait = new WaitBox(this);
     dearchiveWait = new WaitBox(this);
+    errorMessage = new QMessageBox(this);
     at = new ArchivationThread();
     dt = new DearchivationThread();
+
 
     disableButtons();
 
@@ -31,6 +33,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(dt, &QThread::finished, this, &MainWindow::when_dearchivation_complete);
     connect(dearchiveWait, &WaitBox::operation_canceled, this, &MainWindow::when_dearchivation_canceled);
     connect(this, &MainWindow::close_waitBox, dearchiveWait, &WaitBox::on_signal_to_close);
+    connect(dt, &DearchivationThread::exception_executed, this, &MainWindow::when_thread_exception_handled);
+    connect(at, &ArchivationThread::exception_executed, this, &MainWindow::when_thread_exception_handled);
 }
 
 MainWindow::~MainWindow(){
@@ -144,7 +148,7 @@ void MainWindow::on_deleteButton_clicked()
             }
             what = "directory";
         }
-        if(QMessageBox::Yes == QMessageBox::question(this, "", "Are you sure want to delete this " + what+ "?")){
+        if(QMessageBox::Yes == QMessageBox::question(this, "", "Are you sure you want to delete this " + what+ "?")){
             if(activeFile->isDir()){
                 QDir temp(activeFile->absoluteFilePath());
                 temp.removeRecursively();
@@ -166,4 +170,8 @@ void MainWindow::disableButtons(){
     ui->archiveButton->setEnabled(false);
     ui->dearchiveButton->setEnabled(false);
     ui->deleteButton->setEnabled(false);
+}
+
+void MainWindow::when_thread_exception_handled(QString e){
+    QMessageBox::critical(this, "Error", e);
 }

@@ -56,6 +56,10 @@ public:
         else
             return fin.atEnd();
     }
+
+    void close(){
+        fin.close();
+    }
 };
 
 #endif // READBUFFER_H
