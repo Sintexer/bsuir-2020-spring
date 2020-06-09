@@ -11,7 +11,7 @@ public:
     QString code;
     T count{};
     N value{};
-    Node<T, N>* left{nullptr}, *right{nullptr};
+    Node<T, N>* left = nullptr, *right = nullptr;
     bool endNode{false};
 
     Node() = default;

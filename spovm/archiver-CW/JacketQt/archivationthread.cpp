@@ -4,6 +4,7 @@ void ArchivationThread::run(){
     if(fileName.isNull() || !activeFile)
         emit exception_executed("ArchvationThread: fileName or activeFile is empty");
     try{
+        FileTranslator ft;
         ft.openFile(fileName);
         QList<FileEntry> fcList;
         if(activeFile->isDir()){

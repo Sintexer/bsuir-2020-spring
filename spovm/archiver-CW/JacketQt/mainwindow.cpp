@@ -19,7 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     dw = new DialogWindow(this);
     archiveWait = new WaitBox(this);
     dearchiveWait = new WaitBox(this);
-    errorMessage = new QMessageBox(this);
     at = new ArchivationThread();
     dt = new DearchivationThread();
 

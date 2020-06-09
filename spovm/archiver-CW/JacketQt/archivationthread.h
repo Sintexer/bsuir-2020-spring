@@ -15,7 +15,6 @@ private:
     QString fileName;
     QFileInfo *activeFile{nullptr};
     QList<FileEntry> fcList;
-    FileTranslator ft;
 signals:
     void exception_executed(QString e);
 public:

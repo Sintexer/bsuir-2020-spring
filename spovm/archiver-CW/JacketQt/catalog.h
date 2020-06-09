@@ -1,4 +1,4 @@
-    #ifndef CATALOG_H
+#ifndef CATALOG_H
 #define CATALOG_H
 
 #include "pch.h"

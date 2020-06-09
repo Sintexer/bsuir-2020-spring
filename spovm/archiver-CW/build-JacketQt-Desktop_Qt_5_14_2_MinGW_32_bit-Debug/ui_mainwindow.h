@@ -78,29 +78,7 @@ public:
 
         dearchiveButton = new QPushButton(centralwidget);
         dearchiveButton->setObjectName(QString::fromUtf8("dearchiveButton"));
-        dearchiveButton->setStyleSheet(QString::fromUtf8(".myButton {\n"
-"	box-shadow: 0px 7px 0px 0px #3cb1c9;\n"
-"	background-color:#58c2e8;\n"
-"	border-radius:8px;\n"
-"	display:inline-block;\n"
-"	cursor:pointer;\n"
-"	color:#ffffff;\n"
-"	font-family:Arial;\n"
-"	font-size:22px;\n"
-"	font-weight:bold;\n"
-"	padding:13px 24px;\n"
-"	text-decoration:none;\n"
-"	text-shadow:0px 1px 0px #326e82;\n"
-"}\n"
-".myButton:hover {\n"
-"	background-color:#2daec2;\n"
-"}\n"
-".myButton:active {\n"
-"	position:relative;\n"
-"	top:1px;\n"
-"}\n"
-"\n"
-"   "));
+        dearchiveButton->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout->addWidget(dearchiveButton);
 

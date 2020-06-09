@@ -12,7 +12,7 @@ private:
     size_t index{};
     size_t readen{};
 public:
-    ReadBuffer(int inputSize_): inputSize(inputSize_){
+    ReadBuffer(size_t inputSize_): inputSize(inputSize_){
         buffer = new char[inputSize];
         index = inputSize;
     }
